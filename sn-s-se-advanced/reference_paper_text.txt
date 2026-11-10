@@ -1,0 +1,1098 @@
+
+
+--- PAGE 1 ---
+Explainable machine learning-guided design of high-performance 
+thermoelectric materials
+Song Li a, Songli Dai a, Shiyu Xiao a, Zhigang Yu a, Heng Wang a, Zean Tian a,b,*
+a Institute of Advanced Optoelectronic Materials and Technology of School of Big Data and Information Engineering, Guizhou University, Guiyang 550025, China
+b College of Computer Science and Electronic Engineering, Hunan University, Changsha 410082, China
+ARTICLE INFO
+Keywords:
+Thermoelectric materials
+Machine learning
+First-principles calculation
+Feature selection
+SHAP analysis
+ABSTRACT
+Thermoelectric materials are crucial for energy conversion and waste heat recovery. However, materials design 
+based on First-principles calculation is computationally expensive. This study proposes an interpretable machine 
+learning approach to accelerate the screening of novel thermoelectric materials. A dataset of 1093 samples was 
+constructed, and 132 feature parameters were extracted. A model framework integrating a composite feature 
+selection strategy with six machine learning algorithms was developed. As the most effective model, XGBoost 
+was chosen for predicting material performance. Shapley Additive exPlanations (SHAP) analysis identified key 
+features, and a two-dimensional material, SnSe0.25Te0.75, was designed with a 16 % enhancement in thermo-
+electric performance, highly consistent with the First-principles calculation. The study provides an effective 
+pathway for exploring and optimizing thermoelectric materials.
+1. Introduction
+As global energy demand rises and shortages worsen, sustainable 
+strategies focusing on conservation and emission reduction have become 
+crucial. About 66 % of energy is wasted as heat in industry, transport, 
+and electronics due to low energy efficiency [1–3]. The market for waste 
+heat power generation and recovery is expected to grow. Enhancing 
+energy conversion efficiency, especially in thermoelectric materials, is a 
+key focus [4,5]. Thermoelectric devices, which convert heat to elec-
+tricity [6], are more efficient than traditional converters. They are 
+compact, reliable, quiet, and eco-friendly, making them ideal for auto-
+motive, aerospace, medical electronics, and wearables [7,8]. Developing 
+new thermoelectric materials with high efficiency and stability is crucial 
+for better energy utilization [9].
+Traditional thermoelectric materials with precious metal electrodes 
+are expensive to prepare, have a long testing cycle (over 72 h) for a 
+single sample, and are inefficient to develop. Computer technology, 
+combined with density functional theory (DFT), local density approxi-
+mation (LDA), and generalized gradient approximation (GGA), can 
+calculate the energy bands and photovoltaic properties based on the 
+material’s crystal structure [10,11], thus enhancing development effi-
+ciency. However, DFT methods still encounter the technical bottleneck 
+of exponentially increasing computational complexity when analyzing 
+complex energy band structures and multiscale transport processes 
+[12–15]. The Boltzmann transport equation, molecular dynamics (MD) 
+simulations, and the Debye-Callaway model provide crucial support for 
+comprehending the transport properties of materials [16,17]. Machine 
+learning models can identify potential laws from complex data [18–20], 
+achieve the resolution of multidimensional properties and performance 
+prediction of materials, and improving the discovery efficiency and 
+performance evaluation accuracy of new thermoelectric materials 
+[21–23].
+GyoungS. Na et al. [24] proposed a Systematic Identification of 
+Materials Descriptor (SIMD). This method classifies materials into 
+clusters based on their physical and chemical properties, then fuses the 
+system vectors of these clusters with the target statistic to train machine 
+learning model. Consequently, the prediction accuracy of the model was 
+significantly improved. Xue Jia et al. [25] screened 456 half-Heusler 
+compounds from the Materials Project database. They selected 20 sta-
+ble thermoelectric materials from 61 candidates through iterative 
+screening using seven clustering algorithms based on thermoelectric 
+performance metrics. U.S. Vaitesswar et al. [26] established a joint 
+prediction framework combining Crystal Graph Convolutional Neural 
+Networks (CGCNN) and Random Forest (RF). This framework was 
+validated by First-principles calculation and successfully identified four 
+novel half-Heusler compounds, TiGePt, ZrInAu, ZrSiPd, and ZrSiPt.
+* Corresponding author at: College of Computer Science and Electronic Engineering, Hunan University, Changsha 410082, China.
+E-mail address: tianzean@hnu.edu.cn (Z. Tian). 
+Contents lists available at ScienceDirect
+Journal of Alloys and Compounds
+journal homepage: www.elsevier.com/locate/jalcom
+https://doi.org/10.1016/j.jallcom.2025.182164
+Received 21 May 2025; Received in revised form 3 July 2025; Accepted 8 July 2025  
+Journal of Alloys and Compounds 1037 (2025) 182164 
+Available online 9 July 2025 
+0925-8388/© 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies. 
+
+--- PAGE 2 ---
+Given the limitations of prior studies, such as the low accuracy of 
+thermoelectric property predictions, the insufficient interpretability of 
+machine learning models, and the failure to validate material’s stability 
+under high-temperature conditions, we collected 1093 thermoelectric 
+materials from open-source databases and relevant literature. Using 
+Matminer, we extracted features from these materials, and applied 
+several machine learning techniques to predict their thermoelectric 
+power factor (PF) and thermal conductivity (TC). We designed a com-
+posite feature selection method to select the best features and intro-
+duced the SHapley additive exPlanations method [27] to interpret the 
+constructed model. Finally, a high ZT-value thermoelectric material 
+design method is proposed, and the feasibility of the method is verified 
+by First-principles calculation [28].
+2. Materials and methods
+2.1. Data collection and preprocessing
+The thermoelectric figure of merit (ZT = PF*T/TC) is a basic index 
+for evaluating the performance of thermoelectric materials. Optimizing 
+the thermoelectric power factor (PF) and thermal conductivity (TC) is 
+the key to improving the thermoelectric properties of materials. In this 
+study, we integrate the UCSB (University of California, Santa Barbara) 
+thermoelectric database [29] and the literature [24] to construct 1093 
+standardized samples comprising 64 elements. Each sample covers the 
+parameters of the material’s chemical formula, test temperature, See-
+beck coefficient, thermal conductivity TC, power factor PF, and ther-
+moelectric optimum value ZT. In this paper, PF and TC are used as the 
+prediction targets, and the specific data are shown in the Supplementary 
+Materials Table S1. As shown in Fig. 1, the power factor and thermal 
+conductivity parameters exhibibit right-skewed distributions, and a 
+significant class imbalance is observed. This necessitates the use of 
+stratified sampling during model training and the incorporation of a 
+weighted loss function to enhance model robustness.
+2.2. Feature generation and calculation
+Features play a key role in constructing prediction models and 
+revealing the constitutive relationship of materials. In this study, the 
+basic feature set is constructed by the Matminer open-source platform 
+(as shown in Table 1). Then, 184 features are obtained by calculating 
+another 8 potentially relevant features from the literature data. The 
+Fig. 1. Distribution of thermoelectric parameters (a) thermoelectric power factor and (b) thermal conductivity.
+Table 1 
+Material features based on Matminer.
+Number Feature 
+type
+Feature name Feature description
+1 magpie Number atomic number
+2 MendeleevNumber mendeleev number
+3 AtomicWeight atomic weight
+4 MeltingT melting temperature
+5 Column number of columns
+6 Row number of rows
+7 CovalentRadius covalent radius
+8 Electronegativity electronegativity
+9 NsValence number of s-valence electrons
+10 NpValence number of p-valence electrons
+11 NdValence number of d-valence electrons
+12 NfValence number of f-valence electrons
+13 NValence number of valence electrons
+14 NsUnfilled number of unfilled s-valence 
+electrons
+15 NpUnfilled number of unfilled p-valence 
+electrons
+16 NdUnfilled number of unfilled d-valence 
+electrons
+17 NfUnfilled number of unfilled f-valence 
+electrons
+18 NUnfilled number of unfilled valence 
+electrons
+19 GSvolume_pa ground state volume
+20 GSbandgap ground state bandgap
+21 GSmagmom ground state magnetic moment
+22 deml atom_radius atom radius
+23 molar_vol molar volume
+24 heat_fusion heat of fusion
+25 boiling_point boiling point
+26 heat_cap heat capacity
+27 first_ioniz First ionization energy
+28 electric_pol electric polarization
+29 GGAU_Etot GGAU total energy
+30 mus_fere Fermi level
+31 FERE correction Fermi Level Energy correction
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+2 
+
+--- PAGE 3 ---
+features obtained by Matminer open-source platform are divided into 
+two categories: magpie and deml, which cover the properties of the 
+atomic number, electronegativity, lattice symmetry parameter, and the 
+characteristic parameters of the energy bands. The magpie features 
+contain six statistics: minimum, maximum, extreme deviation, mean, 
+mean deviation, and multitude. The deml features contain five statistics: 
+minimum, maximum, extreme deviation, mean, and standard deviation. 
+It constitutes a full chain of data characterization of chemical compo-
+sition, microstructure, and macroscopic properties [30–33].
+Considering that the thermoelectric properties may be related to 
+thermodynamic properties, electronic properties, etc., we calculated 
+eight candidate material characteristics, as shown in Table 2.
+2.3. Feature selection
+In machine learning, redundant features can induce feature catas-
+trophe [41], which hampers model training. Therefore, the irrelevant or 
+redundant features are generally eliminated by feature selection to find 
+the optimal subset of features, which reduces the feature dimension 
+while improving the accuracy of the model. In this paper, feature se-
+lection is accomplished by variance threshold selection, recursive 
+feature elimination, Monte Carlo simulation, and Pearson’s correlation 
+coefficient, as shown in Fig. 2.
+2.3.1. Variance threshold feature selection
+The variance thresholding method is used to initially screen the 
+original features and construct a first-generation feature subset [42]. 
+The variability of feature values is quantified by calculating the feature 
+variance Vx=E[(x-μx)2]. Features with variance exceeding a predefined 
+threshold are retained. High variance indicates significant data volatility 
+and stronger explanatory power for the target variable. Conversely, low 
+variance indicates less volatility in the data and less impact on the 
+model, and thus is eliminated. The process effectively removed static 
+redundant parameters and selected 137 features out of the initial 184.
+2.3.2. Recursive feature elimination
+The XGB model is chosen as the base estimator for recursive feature 
+elimination. The base estimator is trained on the initial features set and 
+assigns a weight to each feature, then removes the least important 
+feature from the current set and repeats this process iteratively until the 
+desired number of features is reached.
+2.3.3. Monte Carlo simulation feature selection
+After the recursive feature selection is completed, to improve the 
+efficiency of multidimensional feature combination optimization, we 
+adopt the Monte Carlo simulation technique based on probabilistic 
+statistics to stably evaluate the model performance under different 
+feature combinations by randomly sampling the candidate features and 
+repeating the experiments, and retain the feature combinations with 
+high R2 values. This method improves the accuracy of the model, re-
+duces the computational complexity, and achieves high training effi-
+ciency while ensuring the robustness of the model [43,44].
+2.3.4. Pearson correlation analysis
+Pearson correlation analysis is utilized to finalized the feature se-
+lection. The correlation coefficients (as shown in Eq. 1), ranging from 
+  1–1, indicate the strength and direction of the liner relationship be-
+tween features, where   1 and 1 represent perfect negative and positive 
+correlations, respectively. In the specific implementation, the correla-
+tion coefficients between all features two by two are calculated first, and 
+then a specific threshold is set so that when the absolute value of the 
+correlation coefficients of two or more features exceeds the threshold, 
+only one of the features is retained [45]. 
+ρ(x,y) = E[(x  μx)  (y  μy)] σxσy (1) 
+Where E denotes the mathematical expectation, μx, μy represent the 
+means of the two samples, σx, σy are the standard deviation of the two 
+samples, and x, y are the eigenvalues of the two samples.
+2.4. Machine learning algorithms and evaluation metrics
+We selected six typical machine learning models for experimental 
+analysis, including Random Forest (RF), Extreme Gradient Boosting 
+(XGBoost), Multilayer Perceptron (MLP), Decision Tree (DT), Support 
+Vector Machine Regression (SVR), and Ridge Regression (Ridge) algo-
+rithms. Both Ridge regression and Support Vector Machine Regression 
+(SVR), which are commonly used in regression tasks, are considered, 
+and Decision Trees and their integration methods are also covered, while 
+neural network models are introduced to enhance prediction 
+performance.
+RF [46] is an ensemble learning method based on the Bagging 
+framework with CART trees, which improves the accuracy of the model 
+by integrating the prediction results from multiple decision trees. MLP 
+[47] employs a feed-forward neural network architecture with a hier-
+archical neuron structure to achieve nonlinear interactions between 
+features. XGBoost [48] uses a stepwise increase in decision trees to 
+improve model performance by optimizing feature splitting nodes. DT 
+[49] simulates the decision-making process by constructing a tree 
+structure with a hierarchical structure, thus effectively accomplishing 
+the prediction task. SVR [50], which employs an ε-insensitive loss 
+function as an optimization criterion to regularize the constraints on 
+deviations beyond a preset threshold. Ridge regression [51], based on 
+traditional linear regression, introduces an L2 regularization term to 
+address the limitations of ordinary least squares in multiple covariance 
+and overfitting scenarios, and maintains the stability of the model in the 
+Table 2 
+Eight candidate features.
+Feature name Formula
+Electron work function [34] wf = ∑n i=1(ciwf )
+Theoretical density [35] ρ= 100/ ∑n i=1(wi/ρi)
+Atomic size difference [34] δ= ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅∑n i=1ci(1  ri/Rm)2 √
+Valence electron concentration [36] VEC= ∑n i=1ciVECi
+Relative Pauling electronegativity [37] Rx= ∑n i=1ci(xi   x0)
+Theoretical molar volume [38] Vm= ∑n i=1ciwi/ρi
+Entropy of fusion [39] Sf=Hf/Tm
+Mixing entropy [40] ΔSmix= ∑n i=1cilnci
+Fig. 2. Feature selection procedure.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+3 
+
+--- PAGE 4 ---
+presence of noisy interference in the data.
+To assess the predictive performance of the regression model, the 
+following three assessment indicators were selected for this study: 
+• Coefficient of Determination： 
+R2 = 1 
+∑n
+i=1
+(yi  ̂yi)2
+∑n
+i=1
+(yi  yi)2
+(2) 
+• Mean Absolute Error： 
+MAE= 1 n ∑n i=1 |yi  ̂yi| (3) 
+• Root Mean Squared Error： 
+RMSE=
+̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+1
+n
+∑n
+i=1(yi  ̂yi)
+2
+√
+(4) 
+where yi is the true value, ȳi is the mean value of the sample, and ˆyi is 
+the predicted value. The range of the coefficient of determination R² 
+is [0, 1], and its value is positively correlated with the model fitting 
+ability; the smaller the mean absolute error (MAE) and the root mean 
+square error (RMSE) indicate the higher prediction accuracy of the 
+model.
+2.5. Model implementation
+In this study, a randomized partitioning strategy was used to allocate 
+1093 data in the ratio of 8:2 between the training set (874) and the test 
+set (219) for model training and performance evaluation, respectively. 
+In order to eliminate the effect of feature magnitude differences on the 
+model, normalization of input features was implemented before model 
+training [52]. The feature data were made to conform to a standard 
+normal distribution with mean 0 and variance 1 by z-score standardi-
+zation method, and the transformation formula is shown in Eq. 5, where 
+x denotes the original feature value, x′ is the standardized feature value, 
+and μ and σ correspond to the feature mean and standard deviation of 
+the training data, respectively. 
+xʹ= x  μ σ (5) 
+To minimize the random bias caused by data insufficiency in the 
+partitioning process, this study employed the K-fold cross-validation 
+method (K = 10) to optimize the model’s stability [53], and the 
+optimal hyperparameters were determined using the grid search 
+method.
+2.6. First-principles calculation
+Crystal structures were built using Materials Studio to calculate the 
+thermoelectric properties of the new materials via the First-principles 
+calculation, using a library of Projector Augmented-Wave (PAW)-type 
+pseudopotentials from the VASP 5.4.4 software package. The specific 
+pseudopotentials used are based on the generalized-gradient approxi-
+mation with Perdew-Burke-Ernzerhof (GGA-PBE) exchange-correlation 
+Fig. 3. Graphical visualization of training for 10-fold cross-validation of six models.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+4 
+
+--- PAGE 5 ---
+generalization [54]. The plane-wave cutoff energy was set to 500 eV for 
+the calculations (See Supplementary Material for plane-wave cutoff 
+energy convergence tests), the energy convergence criterion was set to 
+1× 10  8 eV for controlling the electron self-consistent iteration, and the 
+convergence value of force was set to 1× 10  5 eV/Å, and a 
+Monkhorst-Pack k-point grid of 6× 5× 1 was used. Structural optimi-
+zation and high-precision self-consistency were performed using VASP, 
+which was used in conjunction with BoltzTraP [55] to calculate the 
+Seebeck coefficients, conductivity/relaxation times. The deformation 
+potential theory [56] was used to calculate the elastic constants, 
+deformation potentials, and effective mass for 2D materials with applied 
+uniaxial and biaxial strains ranging from   1.5–1.5 %.
+For the electronic thermal conductivity (κe), the crystal structure was 
+first self-consistent with high precision (K-resolved = 0.03), and then the 
+correlation data obtained from BoltzTraP calculations were used to 
+obtain κe, κe = κ0   TσS2, where κ0 was calculated by BoltzTraP and is 
+the electronic thermal conductivity under closed-circuit conditions, T is 
+the temperature, σ is the conductivity, and S is the Seebeck coefficient 
+[57,58]. κph is calculated by solving the linearized phonon Boltzmann 
+transport equation (LBTE) using the ShengBTE software package, which 
+takes into account the 3rd-order force constants using an iterative 
+method with n-grid = 21× 21× 1 [59]. Specifically, the SnSe0.25Te0.75 
+protocell has 8 atoms, and we perform a 4× 4× 1 cell expansion for the 
+high-precision optimized structure, and the second-order force constant 
+matrix is obtained by the finite-displacement method in combination 
+with VASP and phynopy calculations. The optimized structure is sub-
+jected to 3× 3× 1 cell expansion, the forces of 14 neighboring atoms 
+are considered, and the single-point energies of 2588 POSCARs are 
+calculated, and the third-order force constant matrices are calculated by 
+combining with Thirdorder [60,61], and the lattice thermal conductiv-
+ity κph is calculated based on the second-order and the third-order force 
+constant matrices by ShengBTE.
+The phonon dispersion was obtained by performing density- 
+functional perturbation theory (DFPT) as implemented in the Phonopy 
+software package. To evaluate the thermal stability of the SnSe0.25Te0.75 
+monolayer, ab initio computational molecular dynamics (AIMD) simu-
+lations were carried out on a 4× 4× 1 supercell, using canonical 
+ensemble (NVT) with a Nos´e-Hoover thermal bath scheme [62], setting 
+a time step of 1 fs, a setup step of 9000 steps, and a total simulation 
+duration of 9 ps.
+3. Results and discussion
+3.1. Evaluation of models based on original features
+The performance of six machine learning algorithms was tested 
+based on the original features, and their hyperparameters were opti-
+mized using grid search method, the specific information of which is 
+given in Table S2 of the Supplementary Materials. Fig. 3 shows the 
+training visualization graphs of 10-fold cross-validation for the six 
+models, the black dashed line indicates the perfect model fitting state, 
+the blue line indicates the fitting curve of the model predicted values to 
+the actual values under the training set data, and the red line indicates 
+the fitting curve of the model predicted values to the actual values under 
+the test set data. As shown in Table 3, the RF and XGB models show 
+better performance in predicting PF values (R2 = 0.818, MAE = 2.8×
+10  4, RMSE = 4.6× 10  4), (R2 = 0.858, MAE = 2.1× 10  4, RMSE =
+4.1× 10  4). Additionally we trained the model with these six models on 
+the dataset of thermal conductivity TC, and the results still show that the 
+RF and XGB models have higher accuracy, the details are given in the 
+Supplementary Information, and all together, the XGB model is the 
+optimal model to use for the prediction of PF and TC.
+3.2. Feature importance analysis and optimization
+The XGBoost model shows particular strengths in small and medium- 
+sized dataset modeling scenarios with high prediction accuracy and 
+flexible parameters. In this paper, this regression model is selected for 
+in-depth analysis of thermoelectric parameters. Temperature is added in 
+input feature subset, and the variance of the initial 184 features is 
+calculated. The threshold is set to 0.5, and the features with variance 
+values less than the threshold are excluded, resulting in 137 features. 
+Then, 124 features were subjected to recursive feature elimination using 
+the XGB model, and 37 features with low importance scores were 
+removed to obtain 100 features.
+Subsequently, we used Monte Carlo simulation to perform 20 sim-
+ulations under each combination of features for the sorted 100 features 
+(from highest to lowest contribution), recorded the cross-validation 
+scores, and averaged them. Gradually increase the number of features 
+and observe the R2 value of the model in case of different feature 
+combinations. Fig. 4 shows that the R2 mean value of PF takes the 
+maximum value of 0.776 when the number of features is 23, and 0.769 
+when the number of features is 16. The R2 mean value of TC takes the 
+maximum value of 0.561 when the number of features is 56, and 0.555 
+when the number of features is 15, and the loss of the R2 mean value is 
+0.007 and 0.006, respectively. After recursive feature selection as well as 
+Monte Carlo simulation, we obtain 16 features for thermoelectric power 
+factor and 15 features for thermal conductivity.
+The Pearson correlation coefficients are calculated for the 16 fea-
+tures of thermoelectric power factor as well as for the 15 features of 
+thermal conductivity, respectively, and when |ρ(x,y)| > 0.9 (marked 
+with an asterisk), x and y show very strong correlation, and as can be 
+seen from Fig. 5a, there are 2 strongly correlated feature pairs 
+(M_mean_GSp, D_mean_r), (M _range_n, M_range_w) and 3 strongly 
+correlated feature groups (D_mean_r, Rχ, D_mean_i), (Rχ, D_mean_i, 
+M_mean_e), (D_std_i, D_std_r, M_avg_Cr). As in Fig. 5b, there is one 
+strongly correlated feature pair (M_mean_NfU, M_avg_NfU) and a set of 
+strongly correlated feature groups (M_mode_n, M_mode_w, M_mode_Nv, 
+Table 3 
+R2, MAE, and RMSE of six models with 10-fold cross-validation.
+Model R2 RMSE MAE
+Train 
+data
+Test 
+data
+Train 
+data
+Test 
+data
+Train 
+data
+Test 
+data
+RF 0.898 0.818 0.00034 0.00046 0.0002 0.00028
+MLP 0.319 0.417 0.00087 0.00083 0.00055 0.00053
+XGB 0.923 0.858 0.00029 0.00041 0.00013 0.00021
+DT 0.95 0.835 0.00024 0.00044 0.00006 0.00021
+SVR 0.738 0.623 0.00054 0.00066 0.00034 0.00043
+Ridge 0.735 0.657 0.00054 0.00063 0.00035 0.00042
+Fig. 4. Relationship between the performance of the model in Monte Carlo 
+simulation, R2, and the number of features chosen according to importance.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+5 
+
+--- PAGE 6 ---
+M_mean_n, M_mode_row) in the 15 features of the thermoelectric con-
+ductivity. After iterative checking, six features for thermoelectric power 
+factor (M_mean_GSp, M_range_w, Rχ, D_mean_i, D_range_v, M_avg_Cr) 
+and five features for thermal conductivity (M_avg_NfU, M_mode_n, 
+M_mode_w, M_mode_row, D_max_r) were discarded.
+Machine learning models often present “black box” characteristics, 
+which limit their interpretability at the logical level. To explore the in-
+fluence mechanism of features on the model prediction results, the game 
+theory-based SHAP method is used to interpret the XGBoost model. 
+SHAP can not only quantify the contribution of each feature to the model 
+prediction, but also clarify the direction of its influence. The influence of 
+features on the prediction results is positively correlated with their 
+SHAP values (Sv), and the mean of the sample SHAP values is used as a 
+measure of feature importance.
+Fig. 6 shows the top ten feature importance ranking SHAP value plots 
+for PF and TC, with the horizontal bar representing the average of the 
+SHAP values. For the honeycomb plot, each point represents a data 
+sample, red means the original feature value is high, blue means the 
+original feature value is low, the larger the span of the points indicates 
+that the higher and lower feature values have a greater impact on the 
+model, and the more concentrated the points indicate that the feature 
+values have a lesser impact on the model.
+For Fig. 6a, the significance of “D_std_r” suggests that there is a sig-
+nificant correlation between the standard deviation of the atomic radius 
+of an element and the PF [63], and furthermore, the standard deviation 
+of the first ionization energy of an atom “D_std_i” and the temperature 
+“T” are significant indicating that the PF depends on the electronic 
+properties of the atom. For Fig. 6b, the number of d-orbital electrons 
+“M_avg_NdV” provides the largest SHAP value, which suggests that the 
+TC value is also influenced by the electronic properties of the atom. The 
+temperature “T” also provides a fairly high SHAP value, which is 
+consistent with the conventional understanding that the thermal con-
+ductivity of materials tends to increase with temperature. In addition, 
+the maximum molar volume of an element, “D_max_v”, also has a 
+Fig. 5. Pearson correlation analysis (a) PF and (b) TC.
+Fig. 6. SHAP feature importance ranking plot for XGB model (a) PF and (b) TC.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+6 
+
+--- PAGE 7 ---
+significant effect on TC, suggesting that the density and structure of 
+certain elements can influence the thermal conductivity of a material.
+3.3. Performance of the XGB model based on optimized parameters
+The model is trained by the optimal feature subset, and its learning 
+rate-R2 curve is shown in Fig. 7. Firstly, the random_state parameter of 
+the XGB model is analyzed, and with n_estimators kept at the default 
+value of 100, as shown in Fig. 7a, when the value of random_state is 
+taken to be 22, the R2 values of both PF and TC reach the peak, where PF 
+is 0.854 and TC is 0.95, which indicates that setting the random_state set 
+to 22 is optimal. Further observation of Fig. 7b reveals that for PF, the R2 
+value rises to 0.842 when the number of iterations reaches 10, and then 
+the growth of the R2 value tends to level off with the increase of 
+n_estimator; for TC, the R2 value stabilizes at 0.95 when the number of 
+iterations reaches 30, and then shows the same smooth trend.
+Comparing the distribution of predicted and actual values by visual 
+means, Fig. 8 demonstrates the deviation of prediction results from the 
+ideal fit line (red dashed line). The proximity of the predicted points to 
+this line reflects the model’s prediction accuracy. As shown in Fig. 8a, 
+when the XGB model is trained on PF data, the test set an R2 of 0.86, an 
+MAE of 0.00024, and an RMSE of 0.00044. In Fig. 8b, when the TC data 
+is trained, the R2 is 0.94, the MAE is 0.41, and the RMSE is 1.16.
+It can be seen that in the high-value regions of PF and TC, some of the 
+predicted points exhibit significant deviations from the true values, 
+likely due to insufficient sample size in these regions. To enhance the 
+model’s prediction accuracy, it is recommended to increase the sample 
+size in future studies, especially for the data samples with high PF and 
+TC values.
+3.4. Interpretation of the XGB model
+As illustrated in Fig. 9, two samples (La2.74Te4 and Ti0.99Nb0.01NiSn) 
+[29] are selected from the experimental data to explore how input 
+Fig. 7. Optimization for hyperparameter (a) random_state and (b) n_estimators of the XGB model.
+Fig. 8. Performance of XGB model based on optimized features (a) PF and (b) TC.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+7 
+
+--- PAGE 8 ---
+features influence the model’s output. The ten most important features 
+are ranked from top to bottom. The red and blue colors represent the 
+positive and negative influences of the feature values on the prediction 
+results, respectively. The value in each horizontal bar is the SHAP value, 
+with it’s absolute value reflecting the feature’s influence on the model’s 
+prediction. Here, f(x) is the predicted value, E[f(x)] is the expected 
+value of all sample predictions before considering the SHAP effect, 
+starting from the base value E[f(x)] at the bottom, and each feature 
+adjusts the predicted value according to its SHAP value.
+For La2.74Te4 in Fig. 9a (the true value is 0.594), the feature 
+M_min_GSp, D_std_r, and D_std_i contribute the most to the model pre-
+diction, and it can be seen that the total length of the blue horizontal bar 
+is longer than that of the red horizontal bar, which causes the model 
+prediction to decrease from the baseline value of 0.689–0.591. For 
+Ti0.99Nb0.01NiSn in Fig. 9b (the true value is 2.986), (D_std_r, D_std_i, 
+M_range_n) are the three features with the highest contribution of the 
+model, and all three features positively affect the predicted value of the 
+model, which increases from 0.689 to 2.97 in the baseline value.
+We plotted the SHAP relationship dependency graph of PF to detail 
+the impact of these 10 key features on the XGB model predictions. As 
+shown in Fig. 10, the horizontal axis represents the feature values and 
+the vertical axis represents their SHAP values. Obviously, Sv is positively 
+correlated with M_min_GSp, M_range_m, D_min_v, M_mean_e, and posi-
+tively correlated with D_std_r, D_std_i, M_max_NU, D_std_v negatively. 
+And it can be seen that for feature T and D_mean_r, the distribution of 
+SHAP values is relatively uniform in the corresponding range, so the 
+specific effect of these two features on SHAP values is not considered. 
+M_min_GSp, M_range_n, D_min_v, and M_mean_e increased to 18, 23.5, 
+8.5, and 1.78, respectively, and the SHAP values improved, while 
+D_std_r, D_std_i, M_max_NU, and D_std_v increased to 14.7, 126200, 3.5, 
+and 5.3, respectively, the SHAP value decreases to a negative value.
+From the above, in order to improve the PF, it is recommended that 
+M_min_GSp, M_range_n, D_min_v, and M_mean_e are respectively greater 
+than 18, 23.5, 8.5, and 1.78, while D_std_r, D_std_i, M_max_NU, and 
+D_std_v are less than 14.7, 126200, 3.5, and 5.3, respectively.
+3.5. Thermoelectric material design methodology
+Based on the results of the XGB model and the analysis of the SHAP 
+value feature suggested values, we propose a strategy to optimize the 
+thermoelectric properties. Taking the two materials Ni2Mo6S8 and 
+Bi88Sb12 as an example, the calculation of the key feature values of the 
+two materials is shown in Fig. 11, in which the grey shaded area is 
+visually labeled on the SHAP-recommended feature value intervals. 
+Only three of the eight features (M_range_n, D_std_v, M_mean_e) of 
+Ni2Mo6S8 fall within the range of SHAP value feature recommended 
+values. The other five features fall outside the SHAP value feature sug-
+gestion value. This means that the PF value for Ni2Mo6S8 is very weak, 
+with the actual value (0.00023 Wm  1K  2). In contrast, for Bi88Sb12, all 
+of its eight features fall within the SHAP suggested feature value range, 
+which suggests that Bi88Sb12 has a strong PF value. The XGB model 
+predicts a PF for Bi88Sb12 (actual PF = 0.0042 Wm  1K  2) of 0.0046 
+Wm  1K  2, with a deviation of 9.5 %.
+In addition, taking the four materials Bi2Te3, Sb2Te3, In0.05Co4Sb12, 
+CeFe3CoSb12 [29] as an example, which are also located in the data of 
+the test set, it can be seen from Fig. 12 that only the M_range_n of Sb2Te3 
+is not in the range of SHAP-recommended eigenvalues, and all eigen-
+values of Bi2Te3 are within the SHAP-recommended eigenvalue range 
+after replacing the Sb elements in Sb2Te3 After replacing the Sb element 
+in Sb2Te3 with Bi element, all the eigenvalues of Bi2Te3 are within the 
+range of eigenvalues recommended by SHAP. For In0.05Co4Sb12 and 
+CeFe3CoSb12, the number of features within the SHAP-recommended 
+feature range is also increased from 3 to 4 by replacing the Ce and Fe 
+elements with a certain amount of In elements.
+According to the data analysis in Table 4, the SHAP-recommended 
+range of feature values shows a positive correlation with the number 
+of features, i.e., when the number of features within the recommended 
+values increases, the PF values also increase. The size of the PF value can 
+be effectively adjusted by regulating the material constituent elements 
+and introducing an appropriate amount of additional elements. There-
+fore, we can develop thermoelectric materials with excellent PF values 
+based on the key feature parameters and their boundary conditions.
+Combining the above methods, we aim to dope some elements from 
+known high-performance thermoelectric materials and adjust their 
+compositions to achieve high thermoelectric power factors and low 
+thermal conductivity, thereby enhancing the thermoelectric properties 
+of the materials. Our model will predict the thermoelectric property 
+parameters of the new materials, which will then be validated using DFT 
+to design new high-performance thermoelectric materials [64].
+SnSe, a thermoelectric material with high-temperature stability, 
+oxidation resistance, and abundance crustal availability of Sn and Se 
+[65], was chosen as a representative of the material. It exhibits a PF of 
+0.0006, a TC of 0.38, and a ZT of 1.42 at 900 K. The three features are 
+located in the range of eigenvalues suggested by SHAP, and we doped 
+SnSe with various elements (Ag, Cu, Te, Sb, Fe, Zn, S) in specific 
+amounts, as detailed in Supplementary Materials Table S3. Ultimately, 
+Fig. 9. Waterfall plots of samples (a) La2.74Te4 and (b) Ti0.99Nb0.01NiSn.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+8 
+
+--- PAGE 9 ---
+Fig. 10. Dependence of features on SHAP values of predicted results.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+9 
+
+--- PAGE 10 ---
+the material SnSe0.25Te0.75 was selected, as it has six features within the 
+SHAP-recommended ranges.
+Before conducting thermoelectric property calculations, it is imper-
+ative to ascertain the material’s stability, encompassing mechanical, 
+dynamical, and thermal aspects. The phonon dispersion diagram 
+(Fig. 13) shows that there is a weak imaginary frequency near the Γ 
+point of SnSe0.25Te0.75, which is highly sensitive to the details of the 
+calculations and may disappear completely under certain conditions. 
+Similar phenomena appear in the phonon dispersion of other two- 
+dimensional materials, such as graphene, black phosphorene, and in-
+dium chalcogenides. Inadequate lattice optimization of the protocells, 
+insufficient cell expansion, and poorly set K-point sampling can lead to 
+the appearance of spurious frequencies. In addition, the absolute values 
+of these imaginary frequencies are similar to the deviations when the 
+dispersion curve of the acoustic branch fails to pass through the zero 
+point accurately, when Newton’s third law is not applied to the force 
+constant matrix. For these reasons, the instabilities in these regions are 
+considered spurious rather than actual physical instabilities [66–68].
+We computed the elastic stiffness constants for the two-dimensional 
+material SnSe0.25Te0.75. The mechanical stability of the material must 
+adhere to the Born mechanical stability criteria for 2D systems, 
+Fig. 11. Key features of Ni2Mo6S8 and Bi88Sb12.
+Fig. 12. Key features of Te-based and Co-Sb-based materials.
+Table 4 
+Measured-predicted thermoelectric power factor for four materials.
+Materials Measured PF 
+(Wm  1K  2)
+Predicted PF 
+(Wm  1K  2)
+Deviation 
+(%)
+CeFe3CoSb12 0.00050869 0.0004687   7.8
+In0.05Co4Sb12 0.0013106 0.001426 8.8
+Sb2Te3 0.0032533 0.003025   7.02
+Bi2Te3 0.006728 0.006475   3.76
+Fig. 13. Phonon dispersion relationship of SnSe0.25Te0.75.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+10 
+
+--- PAGE 11 ---
+specifically C11> 0, C11*C22> C12*C12, and C66> 0. As shown in 
+Table 5, the elastic constants of SnSe0.25Te0.75 satisfy these criteria, 
+confirming its mechanical stability [69].
+To assess thermal stability, ab initio molecular dynamics (AIMD) 
+simulations were performed on monolayer SnSe0.25Te0.75 at 300 K, 
+600 K, and 900 K. The results, depicted in Fig. 14 demonstrate that at 
+each temperature, the free energy of the monolayer SnSe0.25Te0.75 
+fluctuates within a narrow range as the simulation progresses, and the 
+structure remains intact under equilibrium conditions. This provides 
+evidence for the material’s thermal stability [70,71].
+The thermoelectric power factor and thermal conductivity of 
+SnSe0.25Te0.75 at different temperatures are predicted based on the final 
+characterization using the XGB model to obtain its thermoelectric op-
+tima, and the thermoelectric optima at the optimal carrier concentration 
+of SnSe0.25Te0.75 at different temperatures are obtained by first- 
+principles calculation .
+As shown in Table 7, κe increases with increasing temperature, and 
+κph decreases with increasing temperature. At low temperatures, the 
+electrical conductivity σ of 2D materials is low, κe= LσT (L is the Lorentz 
+constant) is extremely small, which leads to the dominance of the 
+phonon thermal conductivity κph. At high temperatures, the vibrational 
+amplitude of atoms increases, and the phonon lifetime shortens drasti-
+cally, which results in the attenuation of phonon thermal conductivity, 
+and secondly, intrinsic excitations make the electrical conductivity σ 
+rises substantially, at which time the electronic thermal conductivity 
+κe dominates. At 300 K, the phonon thermal conductivity 
+κph contributes 82.5 % of the total thermal conductivity κ, and at 
+900 K, the phonon thermal conductivity κph contributes 7.5 % of the 
+total thermal conductivity κ. This is in agreement with the expectation 
+that the phonon thermal conductivity is dominant in typical thermo-
+electric materials [72].
+At 900 K temperature, the thermoelectric figure of merit obtained 
+from DFT calculation is 1.58, and the machine learning model predicts 
+1.62, with a prediction error of 2.5 % (as shown in Table 8). After doping 
+Te element, the thermoelectric figure of merit is improved by 0.22, and 
+the thermoelectric performance is improved by 16 % concerning the 
+original SnSe (Table 6).
+Although the focus of this study is on SnSe, our research methods and 
+ideas are generalizable and can provide a reference for the study of other 
+thermochromic materials. For example, the properties of thermochro-
+mic materials can be modulated by different preparation methods to 
+meet specific application requirements [73,74]. In the field of nano-
+fluids, the thermal conductivity of fluids is enhanced by nanotechnology 
+[75]. In addition, hybrid nanostructured thin films were prepared by 
+reactive pulsed laser deposition (r-PLD) technique to enhance their field 
+emission properties for radiation micro-nano dosimetry applications 
+[76].
+Table 5 
+Elastic stiffness coefficients C11, C12, C66 of SnSe0.25Te0.75.
+Compound C11 (N/m) C12 (N/m) C22 (N/m) C66 (N/m)
+SnSe0.25Te0.75 75.419 32.928 37.150 35.666
+Fig. 14. Energy fluctuations and structural changes of SnSe0.25Te0.75 at 300 K, 600 K, and 900 K.
+Table 6 
+Predicted and experimental values of ZT for SnSe at various temperatures.
+SnSe ZT (ML) ZT (experimental)
+300 K 0.04 0.05
+500 K 
+700 K 
+900 K
+0.21 
+0.79 
+1.39
+0.18 
+0.64 
+1.36
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+11 
+
+--- PAGE 12 ---
+4. Conclusion
+Our work considers six machine learning models and constructs a 
+machine learning-based thermoelectric material design system through 
+the steps of data acquisition, feature selection, model construction, 
+model optimization, and model interpretation. The composite feature 
+selection method is utilized to characterize PF and TC, respectively, and 
+10 optimal features for PF and 11 optimal features for TC are filtered 
+from 184 original features. Based on the subset of optimal features, the 
+XGB regression model has the highest R2 scores of 0.86 for PF and 0.94 
+for TC. The SHAP method is introduced to reveal some hidden infor-
+mation between these features and the thermoelectric power factor. The 
+results reveal the pattern of materials with good thermoelectric power 
+factor: the M_min_GSp, M_range_N, D_min_v, and M_mean_e are larger 
+than 18, 23.5, 8.5, and 1.78, respectively, while the D_std_r, D_std_i, 
+M_max_NU, and D_std_v are smaller than 14.7, 126200, 3.5, and 5.3. 
+Finally, the results of this paper are validated by using SnSe 0.25Te0.75 
+material as an example. The interpretability of the method is instructive 
+for the design of thermoelectric materials and can accelerate the 
+development of thermoelectric materials. There is some overfitting in 
+the proposed model due to the limited publicly available data, and a 
+larger dataset helps to reduce this overfitting.
+CRediT authorship contribution statement
+Shiyu Xiao: Software, Resources, Project administration. Zhigang 
+Yu: Formal analysis, Data curation. Song Li: Writing – review & editing, 
+Writing – original draft, Visualization, Validation, Supervision, Soft-
+ware, Resources, Project administration, Methodology, Investigation, 
+Funding acquisition, Formal analysis, Data curation, Conceptualization. 
+Songli Dai: Methodology, Investigation, Funding acquisition, Formal 
+analysis, Data curation, Conceptualization. Zean Tian: Formal analysis, 
+Data curation, Conceptualization. Heng Wang: Software, Resources.
+Declaration of Competing Interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Acknowledgments
+The work was supported by the National Key R&D Program of China 
+(Grant No. 2023YFB3003004), the Industry and Education Combination 
+Innovation Platform of Intelligent Manufacturing and Graduate Joint 
+Training Base at Guizhou University (Grant No. 
+2020–520000–83–01–324061), Construction of Science and Technol-
+ogy Platform of Guiyang (Grant No. [2023]7–3).
+Appendix A. Supporting information
+Supplementary data associated with this article can be found in the 
+online version at doi:10.1016/j.jallcom.2025.182164.
+References
+[1] V.G. Dovì, F. Friedler, D. Huisingh, J.J. Klemeˇs, Cleaner energy for sustainable 
+future, J. Clean. Prod. 17 (10) (2009) 889–895, https://doi.org/10.1016/j. 
+jclepro.2009.02.001.
+[2] A.Q. Al-Shetwi, Sustainable development of renewable energy integrated power 
+sector: trends, environmental impacts, and recent challenges, Sci. Total Environ. 
+822 (2022) 153645, https://doi.org/10.1016/j.scitotenv.2022.153645.
+[3] A.K.S. Al-Sayyab, A. Mota-Babiloni, J. Navarro-Esbrí, Renewable and waste heat 
+applications for heating, cooling, and power generation based on advanced 
+configurations, Energy Conv. Manag 291 (2023) 117253, https://doi.org/10.1016/ 
+j.enconman.2023.117253.
+[4] N.M. Jubeh, Y.S.H. Najjar, Cascaded waste-heat recovery as a green technology for 
+energy sustainability in power generation, Int. J. Energy Res. 38 (10) (2014) 
+1361–1365, https://doi.org/10.1002/er.3160.
+[5] G. Peng, L. Hu, W. Qu, C. Zhang, S. Li, Z. Liu, J. Liu, S. Guo, Y. Xiao, Z. Gao, 
+Z. Zhang, Y. Zhang, H. Wu, S.J. Pennycook, J. Sun, X. Ding, Structural-functional 
+unit ordering for high-performance electron-correlated materials, Interdiscip. 
+Mater. 2 (1) (2023) 30–52, https://doi.org/10.1002/idm2.12058.
+[6] P. Vaqueiro, Advanced thermoelectric materials and devices, ACS Appl. Electron. 
+Mater. 6 (5) (2024) 2797–2798, https://doi.org/10.1021/acsaelm.4c00811.
+[7] W. Sun, W. Liu, Q. Liu, Z. Chen, Advances in thermoelectric devices for localized 
+cooling, Chem. Eng. J. 450 (2022) 138389, https://doi.org/10.1016/j. 
+cej.2022.138389.
+[8] S. Soumya, K.S. Fatima, S. Lekshmi, S.G. Namboothiri, P.K. Krishnapriya, V. 
+A. Shreya, V.S. Harikrishnan, A.C. Mohan, H. Joh, J.R. Rani, V. Panwar, K. 
+M. Sreedhar, J. P, S. Samanta, J.Y. Jo, G. Anoop, Advancements in thermoelectric 
+materials: emerging trends in organic, inorganic systems, and material informatics, 
+J. Alloy. Compd. 1028 (2025) 180661, https://doi.org/10.1016/j. 
+jallcom.2025.180661.
+[9] X. Yang, C. Wang, R. Lu, Y. Shen, H. Zhao, J. Li, R. Li, L. Zhang, H. Chen, T. Zhang, 
+X. Zheng, Progress in measurement of thermoelectric properties of micro/nano 
+thermoelectric materials: a critical review, Nano Energy 101 (2022) 107553, 
+https://doi.org/10.1016/j.nanoen.2022.107553.
+[10] P. Ying, T. Liang, K. Xu, J. Zhang, J. Xu, Z. Zhong, Z. Fan, Sub-micrometer phonon 
+mean free paths in metal-organic frameworks revealed by machine learning 
+molecular dynamics simulations, ACS Appl. Mater. Interfaces 15 (30) (2023) 
+36412–36422, https://doi.org/10.1021/acsami.3c07770.
+[11] J. Yang, J. Li, C. Zhang, Z. Feng, B. Shi, W. Zhai, Y. Yan, Y. Wang, Excellent 
+thermoelectric performance of BaMgSi driven by low lattice thermal conductivity: 
+a promising thermoelectric material, J. Alloy. Compd. 827 (2020) 154342, https:// 
+doi.org/10.1016/j.jallcom.2020.154342.
+[12] H. Zhu, G. Hautier, U. Aydemir, Z.M. Gibbs, G. Li, S. Bajaj, J. P¨ohls, D. Broberg, 
+W. Chen, A. Jain, M.A. White, M. Asta, G.J. Snyder, K. Persson, G. Ceder, 
+Correction: computational and experimental investigation of TmAgTe2 and XYZ2 
+compounds, a new group of thermoelectric materials identified by first-principles 
+high-throughput screening, J. Mater. Chem. C. 4331 (4) (2016) 10554–10565, 
+https://doi.org/10.1039/C6TC90077A.
+[13] B.L. Decost, J.R. Hattrick-Simpers, Z. Trautt, A.G. Kusne, E. Campo, M.L. Green, 
+Scientific AI in materials science: a path to a sustainable and scalable paradigm, 
+Mach. Learn. Sci. Technol. 1 (3) (2020), https://doi.org/10.1088/2632-2153/ 
+ab9a20.
+[14] A. Albavera-Mata, K. Botello-Mancilla, S.B. Trickey, J.L. G´azquez, A. Vela, G.F.U.S. 
+Univ. Of Florida, Generalized gradient approximations with local parameters, 
+Phys. Rev. B 102 (3) (2020), https://doi.org/10.1103/PhysRevB.102.035129.
+[15] J. Han, K. Kim, Boltzmann transport theory for many-body localization, Phys. Rev. 
+B 97 (2018), https://doi.org/10.1103/PhysRevB.97.214206.
+[16] H. Huang, R. Magar, A. Barati Farimani, Pretraining strategies for structure 
+agnostic material property prediction, J. Chem. Inf. Model 64 (3) (2024) 627–637, 
+https://doi.org/10.1021/acs.jcim.3c00919.
+[17] Y.J. Zheng, A.Q. Wang, X.P. Jia, F.B. Wang, A.L. Yang, H.L. Huang, G.H. Zuo, L. 
+B. Wang, L. Deng, Optimization of thermoelectric properties of CoSb3 materials by 
+increasing the complexity of chemical structure, J. Alloy. Compd. 843 (2020) 
+156063, https://doi.org/10.1016/j.jallcom.2020.156063.
+[18] T. Fan, A.R. Oganov, Combining machine-learning models with first-principles 
+high-throughput calculations to accelerate the search for promising thermoelectric 
+Table 8 
+Predicted and experimental ZT values for SnSe0.25Te0.75 at various temperatures.
+SnSe0.25Te0.75 ZT (ML) ZT (experimental)
+300 K 0.23 0.28
+500 K 
+700 K 
+900 K
+0.52 
+1.43 
+1.62
+0.48 
+1.21 
+1.58
+Table 7 
+Predicted and DFT calculated values of thermal conductivity and thermoelectric power factor for SnSe0.25Te0.75 at different temperatures.
+T 
+（ K）
+κe (DFT) 
+(Wm  1K  1)
+κph (DFT) 
+(Wm  1K  1)
+κ (DFT) 
+(Wm  1K  1)
+κ (ML) 
+(Wm  1K  1)
+PF (ML) 
+(Wm  1K  2)
+PF (DFT) 
+(Wm  1K  2)
+300 0.25 1.18 1.43 1.37 0.00118 0.00133
+500 
+700 
+900
+0.29 
+0.34 
+0.37
+0.36 
+0.17 
+0.03
+0.65 
+0.51 
+0.4
+0.59 
+0.48 
+0.37
+0.000531 
+0.000773 
+0.000664
+0.000624 
+0.000882 
+0.000702
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+12 
+
+--- PAGE 13 ---
+materials, J. Mater. Chem. C 13 (3) (2025) 1439–1448, https://doi.org/10.1039/ 
+D4TC03403A.
+[19] Y. Zhang, First-principles Debye-Callaway approach to lattice thermal 
+conductivity, J. Mater. 2 (3) (2016) 237–247, https://doi.org/10.1016/j. 
+jmat.2016.06.004.
+[20] H. Arimatsu, Y. Osada, R. Takagi, T. Fujima, First-Principle Study on p-n Control of 
+PEDOT-based thermoelectric materials by PTSA doping, Polymers 13 (20) (2021) 
+3518, https://doi.org/10.3390/polym13203518.
+[21] C. Gao, X. Min, M. Fang, T. Tao, X. Zheng, Y. Liu, X. Wu, Z. Huang, Innovative 
+materials science via machine learning, Adv. Funct. Mater. 32 (1) (2022), https:// 
+doi.org/10.1002/adfm.202108044.
+[22] D. Morgan, R. Jacobs, Opportunities and challenges for machine learning in 
+materials science, Annu. Rev. Mater. Res. 50 (2020) 71–103, https://doi.org/ 
+10.1146/annurev-matsci-070218-010015.
+[23] J. Carrete, N. Mingo, S. Wang, S. Curtarolo, Nanograined Half-Heusler 
+semiconductors as advanced thermoelectrics: an ab initio high-throughput 
+statistical study, Adv. Funct. Mater. 24 (47) (2014) 7427–7432, https://doi.org/ 
+10.1002/adfm.201401201.
+[24] G.S. Na, H. Chang, A public database of thermoelectric materials and system- 
+identified material representation for data-driven discovery, npj Comput. Mater. 8 
+(2022) 214, https://doi.org/10.1038/s41524-022-00897-2.
+[25] X. Jia, Y. Deng, X. Bao, H. Yao, S. Li, Z. Li, C. Chen, X. Wang, J. Mao, F. Cao, J. Sui, 
+J. Wu, C. Wang, Q. Zhang, X. Liu, Unsupervised machine learning for discovery of 
+promising half-Heusler thermoelectric materials, npj Comput. Mater. 8 (1) (2022) 
+1–9, https://doi.org/10.1038/s41524-022-00723-9.
+[26] U.S. Vaitesswar, D. Bash, T. Huang, J. Recatala-Gomez, T. Deng, S. Yang, X. Wang, 
+K. Hippalgaonkar, Machine learning based feature engineering for thermoelectric 
+materials by design, Digit. Discov. 3 (1) (2024) 210–220, https://doi.org/10.1039/ 
+D3DD00131H.
+[27] J. Jeon, N. Seo, S.B. Son, J. Jung, S. Lee, Application of explainable artificial 
+intelligence for prediction and feature analysis of carbon diffusivity in austenite, 
+J. Mater. Sci. 57 (38) (2022) 18142–18153, https://doi.org/10.1007/s10853-022- 
+07538-5.
+[28] Q. Tan, W. Sun, Z. Li, J. Li, Enhanced thermoelectric properties of earth-abundant 
+Cu2SnS3 via in doping effect, J. Alloy. Compd. 672 (2016) 558–563, https://doi. 
+org/10.1016/j.jallcom.2016.02.185.
+[29] Materials Research at UCSB, Adv. Mater. 23 (20) (2011) 2247, https://doi.org/ 
+10.1002/adma.201190071.
+[30] K.E. Vipin, P. Padhan, Machine-learning guided prediction of thermoelectric 
+properties of topological insulator Bi2Te3-xSex, Journal of materials chemistry, 
+Mater. Opt. Electron. Dev. 12 (20) (2024) 7415–7425, https://doi.org/10.1039/ 
+d4tc01058b.
+[31] L. Ward, A. Dunn, A. Faghaninia, N.E.R. Zimmermann, S. Bajaj, Q. Wang, 
+J. Montoya, J. Chen, K. Bystrom, M. Dylla, K. Chard, M. Asta, K.A. Persson, G. 
+J. Snyder, I. Foster, A. Jain, Matminer: an open source toolkit for materials data 
+mining, Comput. Mater. Sci. 152 (2018) 60–69, https://doi.org/10.1016/j. 
+commatsci.2018.05.018.
+[32] M.T. Mbaye, S.K. Pradhan, M. Bahoura, Data-driven thermoelectric modeling: 
+current challenges and prospects, J. Appl. Phys. 130 (19) (2021), https://doi.org/ 
+10.1063/5.0054532.
+[33] M.M. Islam, Low dimensional fragment-based descriptors for property predictions 
+in inorganic materials with machine learning, arXiv Phys. Mater. Sci. 21146 (2407) 
+(2024), https://doi.org/10.48550/arXiv.2407.21146.
+[34] E.M. Kiarii, K.K. Govender, M.A. Mamo, P.P. Govender, A DFT study of two- 
+dimensional CdS/TiS2 on isotropic chalcogenide AgSbTe2 thermoelectric material: 
+electronic charge transfer and optical properties, Curr. Appl. Phys. 40 (2022) 
+50–61, https://doi.org/10.1016/j.cap.2020.06.004.
+[35] B. Zhu, X. Su, S. Shu, Y. Luo, X.Y. Tan, J. Sun, D. Sun, H. Zhang, Q. Zhang, 
+A. Suwardi, Y. Zheng, Cold-sintered Bi2Te3 -based materials for engineering 
+nanograined thermoelectrics, ACS Appl. Energ. Mater. 5 (2) (2022) 2002–2010, 
+https://doi.org/10.1021/acsaem.1c03540.
+[36] D.K. Misra, A. Bhardwaj, S. Singh, Enhanced thermoelectric performance of a new 
+half-Heusler derivative Zr9Ni7Sn8 bulk nanocomposite: enhanced electrical 
+conductivity and low thermal conductivity, J. Mater. Chem. A 2 (30) (2014) 
+11913–11921, https://doi.org/10.1039/C4TA01380H.
+[37] H. Shi, D. Wang, Y. Xiao, L.D. Zhao, Dynamic carrier transports and low thermal 
+conductivity inn -type layered InSe thermoelectrics, Aggregate 2 (4) (2021), 
+https://doi.org/10.1002/agt2.92.
+[38] W. Li, M. Liu, Interpretable machine learning workflow for evaluating and 
+analyzing the performance of high-entropy GeTe-Based thermoelectric materials, 
+ACS Appl. Electron. Mater. 5 (8) (2023) 4523–4533, https://doi.org/10.1021/ 
+acsaelm.3c00692.
+[39] P. Li, X. Qi, L. Wang, A comprehensive study of lead telluride (PbTe)-based 
+amorphous alloys: glass formation and thermoelectric properties, J. NonCryst. 
+Solids 571 (2021) 121057, https://doi.org/10.1016/j.jnoncrysol.2021.121057.
+[40] L. Hu, Y. Zhang, H. Wu, J. Li, Y. Li, M. Mckenna, J. He, F. Liu, S.J. Pennycook, 
+X. Zeng, Entropy engineering of SnTe: multi-principal-element alloying leading to 
+ultralow lattice thermal conductivity and state-of-the-art thermoelectric 
+performance, Adv. Energy Mater. 8 (29) (2018), https://doi.org/10.1002/ 
+aenm.201802116.
+[41] T.R. N, R. Gupta, An efficient feature subset selection approach for machine 
+learning, Multimed. Tools Appl. 80 (8) (2021) 12737–12830, https://doi.org/ 
+10.1007/s11042-020-10011-7.
+[42] S.D.A. Rihan, M. Anbar, B.A. Alabsi, Approach for detecting attacks on IoT 
+networks based on ensemble feature selection and deep learning models, Sensors 
+23 (17) (2023) 7342, https://doi.org/10.3390/s23177342.
+[43] J.I. Santos, M. Pereda, V. Ahedo, J.M. Gal´an, Explainable machine learning for 
+project management control, Comput. Ind. Eng. 180 (2023) 109261, https://doi. 
+org/10.1016/j.cie.2023.109261.
+[44] M. Kumagai, Y. Ando, A. Tanaka, K. Tsuda, Y. Katsura, K. Kurosaki, Effects of data 
+bias on machine-learning-based material discovery using experimental property 
+data, Sci. Technol. Adv. Mater. Methods 2 (1) (2022) 302–309, https://doi.org/ 
+10.1080/27660400.2022.2109447.
+[45] A. Carballal, C. Fernandez-Lozano, J. Heras, J. Romero, Transfer learning features 
+for predicting aesthetics through a novel hybrid machine learning method, Neural 
+Comput. Appl. 32 (10) (2020) 5889–5900, https://doi.org/10.1007/s00521-019- 
+04065-4.
+[46] L. Breiman, Random forests, Mach. Learn 45 (2001) 5–32, https://doi.org/ 
+10.1023/A:1010933404324.
+[47] J.L. Cremer, G. Strbac, A machine-learning based probabilistic perspective on 
+dynamic security assessment, Int. J. Electr. Power Energy Syst. 128 (2021) 106571, 
+https://doi.org/10.1016/j.ijepes.2020.106571.
+[48] T. Chen, C. Guestrin, XGBoost A Scalable Tree Boost. Syst. (2016) 785–794, 
+https://doi.org/10.1145/2939672.2939785.
+[49] B.M. Castro, U.A. Monteiro, R.H.R. Guti´errez, D.H.C.D. Martins, L.A. Vaz, 
+Numerical and experimental correlation of a catamaran’s vibration modes using 
+supervised machine learning, Ocean Eng. 259 (2022) 111838, https://doi.org/ 
+10.1016/j.oceaneng.2022.111838.
+[50] R. Lang, F. Zhao, Y. Shi, A support vector machine for regression in complex field, 
+Informatica 28 (4) (2017) 651–664, https://doi.org/10.15388/ 
+Informatica.2017.150.
+[51] A. Rokem, K. Kay, Fractional ridge regression: a fast, interpretable 
+reparameterization of ridge regression, Gigascience 9 (12) (2020), https://doi.org/ 
+10.1093/gigascience/giaa133.
+[52] J. Zhou, H. Lin, H. Jin, S. Li, Z. Yan, S. Huang, Cooperative prediction method of 
+gas emission from mining face based on feature selection and machine learning, 
+Int. J. Coal Sci. Technol. 9 (1) (2022), https://doi.org/10.1007/s40789-022- 
+00519-8.
+[53] J.D. Rodriguez, A. Perez, J.A. Lozano, Sensitivity analysis of k-Fold cross validation 
+in prediction error estimation, IEEE Trans. Pattern Anal. Mach. Intell. 32 (3) (2010) 
+569–575, https://doi.org/10.1109/TPAMI.2009.187.
+[54] J.P. Perdew, K. Burke, M. Ernzerhof, Generalized gradient approximation made 
+simple, Phys. Rev. Lett. 77 (1996), https://doi.org/10.1103/PhysRevLett.77.3865.
+[55] T. Lin, Q. Gao, G. Liu, First-principles investigation of the structural, mechanical, 
+electronic and thermoelectric properties of ZnFeNbAl Heusler compound, Mater. 
+Today Commun. 34 (2023) 105046, https://doi.org/10.1016/j. 
+mtcomm.2022.105046.
+[56] H. Lang, S. Zhang, Z. Liu, Mobility anisotropy of two-dimensional semiconductors, 
+Phys. Rev. B 94 (2016), https://doi.org/10.1103/PhysRevB.94.235306.
+[57] M. Li, N. Wang, M. Jiang, H. Xiao, H. Zhang, Z. Liu, X. Zu, L. Qiao, Improved 
+thermoelectric performance of bilayer Bi2O2Se by the band convergence approach, 
+J. Mater. Chem. C 7 (35) (2019) 11029–11039, https://doi.org/10.1039/ 
+C9TC02188D.
+[58] G.K.H. Madsen, J. Carrete, M.J. Verstraete, BoltzTraP2, a program for interpolating 
+band structures and calculating semi-classical transport coefficients, Comput. Phys. 
+Commun. 231 (2018) 140–145, https://doi.org/10.1016/j.cpc.2018.05.010.
+[59] N. Wang, H. Gong, Z. Sun, C. Shen, B. Li, H. Xiao, X. Zu, D. Tang, Z. Yin, X. Wu, 
+H. Zhang, L. Qiao, Boosting thermoelectric performance of 2D transition-metal 
+dichalcogenides by complex cluster substitution: the role of octahedral Au6 
+clusters, ACS Appl. Energy Mater. 4 (11) (2021) 12163–12176, https://doi.org/ 
+10.1021/acsaem.1c01777.
+[60] G. Qin, M. Hu, Accelerating evaluation of converged lattice thermal conductivity, 
+npj Comput. Mater. 4 (2018) 3, https://doi.org/10.1038/s41524-017-0058-3.
+[61] Z. Sun, K. Yuan, Z. Chang, S. Bi, X. Zhang, D. Tang, Ultra-low thermal conductivity 
+and high thermoelectric performance of two-dimensional triphosphides (InP3, 
+GaP3, SbP3 and SnP3): a comprehensive first-principles study, Nanoscale 12 (5) 
+(2020) 3330–3342, https://doi.org/10.1039/C9NR08679J.
+[62] G. Kresse, J. Hafner, Ab initio molecular dynamics for open-shell transition metals, 
+Phys. Rev. B Condens Matter 48 (17) (1993) 13115–13118, https://doi.org/ 
+10.1103/physrevb.48.13115.
+[63] A. Alibakhshi, L.V. Sch¨afer, Thermodynamically consistent atomic radii of main 
+group elements, ChemRxiv 1 (26) (2024), https://doi.org/10.26434/chemrxiv- 
+2024-89wth.
+[64] N.K. Singh, S. Bathula, B. Gahtori, K. Tyagi, D. Haranath, A. Dhar, The effect of 
+doping on thermoelectric performance of p-type SnSe: promising thermoelectric 
+material, J. Alloy. Compd. 668 (2016) 152–158, https://doi.org/10.1016/j. 
+jallcom.2016.01.190.
+[65] B. Cai, H. Hu, H. Zhuang, J. Li, Promising materials for thermoelectric applications, 
+J. Alloy. Compd. 806 (2019) 471–486, https://doi.org/10.1016/j. 
+jallcom.2019.07.147.
+[66] C. Lin, S. Ponc´e, N. Marzari, General invariance and equilibrium conditions for 
+lattice dynamics in 1D, 2D, and 3D materials, npj Comput. Mater. 8 (2022) 236, 
+https://doi.org/10.1038/s41524-022-00920-6.
+[67] S. Duan, Y. Cui, W. Yi, X. Chen, B. Yang, X. Liu, Enhanced thermoelectric 
+performance in black phosphorene via tunable interlayer twist, Small 18 (49) 
+(2022), https://doi.org/10.1002/smll.202204197.
+[68] V. Zolyomi, N.D. Drummond, V.I. Fal’ko, Electrons and phonons in single layers of 
+hexagonal indium chalcogenides from ab initio calculations, Phys. Rev. B 89 
+(2014), https://doi.org/10.1103/PhysRevB.89.205416.
+[69] J. Gao, Q. Liu, B. Tang, Elastic stability criteria of seven crystal systems and their 
+application under pressure: taking carbon as an example, J. Appl. Phys. 133 (13) 
+(2023), https://doi.org/10.1063/5.0139232.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+13 
+
+--- PAGE 14 ---
+[70] N. Wang, M. Li, H. Xiao, X. Zu, L. Qiao, Layered LaCuOSe: a promising anisotropic 
+thermoelectric material, Phys. Rev. Appl. 13 (2020), https://doi.org/10.1103/ 
+PhysRevApplied.13.024038.
+[71] M. Shtern, A. Sherchenkov, Y. Shtern, N. Borgardt, M. Rogachev, A. Yakubov, 
+A. Babich, D. Pepelyaev, I. Voloshchuk, Y. Zaytseva, S. Pereverzeva, 
+A. Gerasimenko, D. Potapov, D. Murashko, Mechanical properties and thermal 
+stability of nanostructured thermoelectric materials on the basis of PbTe and GeTe, 
+J. Alloy. Compd. 946 (2023) 169364, https://doi.org/10.1016/j. 
+jallcom.2023.169364.
+[72] G. Fugallo, L. Colombo, Calculating lattice thermal conductivity: a synopsis, Phys. 
+Scr. 93 (2018) 043002, https://doi.org/10.1088/1402-4896/aab743.
+[73] J.B. Kana Kana, J.M. Ndjaka, P.Owono Ateba, B.D. Ngom, N. Manyala, 
+O. Nemraoui, A.C. Beye, M. Maaza, Thermochromic VO2 thin films synthesized by 
+rf-inverted cylindrical magnetron sputtering, Appl. Surf. Sci. 254 (13) (2008) 
+3959–3963, https://doi.org/10.1016/j.apsusc.2007.12.021.
+[74] B.S. Khanyile, N. Numan, A. Simo, M. Nkosi, C.B. Mtshali, Z. Khumalo, I.G. Madiba, 
+B. Mabakachaba, H. Swart, E. Coetsee-Hugo, M. Duvenhage, E. Lee, M. Henini, 
+A. Gibaud, M. Chaker, P. Rezaee, N. Lethole, M. Akbari, R. Morad, M. Maaza, 
+Towards room temperature thermochromic coatings with controllable NIR-IR 
+modulation for solar heat management & smart windows applications, Sci. Rep. 14 
+(2024) 2818, https://doi.org/10.1038/s41598-024-52021-7.
+[75] M. Aligholami, M. Akbari, R. Morad, T.M. Moodley, M. Adebisi, T. Fakude, 
+S. Heshmatian, M. Maaza, Enhanced thermal conductivity of Cu Grafted graphene- 
+C2H6O2 based nanofluids by laser ablation for potential application as coolants in 
+data centers, Sci. Rep. 15 (2025) 17679, https://doi.org/10.1038/s41598-025- 
+00622-1.
+[76] E. Manikandan, J. Kennedy, G. Kavitha, K. Kaviyarasu, M. Maaza, B.K. Panigrahi, 
+U.Kamachi Mudali, Hybrid nanostructured thin-films by PLD for enhanced field 
+emission performance for radiation micro-nano dosimetry applications, J. Alloy. 
+Compd. 647 (2015) 141–145, https://doi.org/10.1016/j.jallcom.2015.06.102.
+S. Li et al.                                                                                                                                                                                                                                        Journal of Alloys and Compounds 1037 (2025) 182164 
+14 

@@ -1,0 +1,253 @@
+{
+  "rows": 5255,
+  "unique_compositions": 880,
+  "features": [
+    "T",
+    "n_elements",
+    "mix_entropy",
+    "frac_Ag",
+    "frac_As",
+    "frac_Bi",
+    "frac_Br",
+    "frac_C",
+    "frac_Cd",
+    "frac_Co",
+    "frac_Cu",
+    "frac_Fe",
+    "frac_Ga",
+    "frac_Ge",
+    "frac_In",
+    "frac_Na",
+    "frac_S",
+    "frac_Sb",
+    "frac_Se",
+    "frac_Sn",
+    "frac_Te",
+    "frac_Tl",
+    "frac_Zn",
+    "mass_mean",
+    "mass_min",
+    "mass_max",
+    "mass_range",
+    "mass_std",
+    "Z_mean",
+    "Z_min",
+    "Z_max",
+    "Z_range",
+    "Z_std",
+    "EN_mean",
+    "EN_min",
+    "EN_max",
+    "EN_range",
+    "EN_std",
+    "radius_mean",
+    "radius_min",
+    "radius_max",
+    "radius_range",
+    "radius_std",
+    "formula_mass",
+    "Sn_minus_Se",
+    "S_to_Se"
+  ],
+  "metrics": [
+    {
+      "model": "Ridge_select",
+      "split": "heldout_groups",
+      "R2": 0.2973042451946881,
+      "MAE": 0.21263700209122186,
+      "RMSE": 0.27550400518383966
+    },
+    {
+      "model": "Ridge_select",
+      "split": "grouped_cv",
+      "R2": 0.25903003076660613,
+      "MAE": 0.23103215986813644,
+      "RMSE": 0.301754759510713
+    },
+    {
+      "model": "RandomForest",
+      "split": "heldout_groups",
+      "R2": 0.719093434830266,
+      "MAE": 0.10302407484367451,
+      "RMSE": 0.1741907931385524
+    },
+    {
+      "model": "RandomForest",
+      "split": "grouped_cv",
+      "R2": 0.6442583693141699,
+      "MAE": 0.11721898163189137,
+      "RMSE": 0.20908417869458215
+    },
+    {
+      "model": "ExtraTrees",
+      "split": "heldout_groups",
+      "R2": 0.7447291343377895,
+      "MAE": 0.09740652497657921,
+      "RMSE": 0.16605229315327488
+    },
+    {
+      "model": "ExtraTrees",
+      "split": "grouped_cv",
+      "R2": 0.6980524941693348,
+      "MAE": 0.10860676257151951,
+      "RMSE": 0.1926280590891621
+    },
+    {
+      "model": "GradientBoosting",
+      "split": "heldout_groups",
+      "R2": 0.4854538540483596,
+      "MAE": 0.17335150470124053,
+      "RMSE": 0.23575255965706843
+    },
+    {
+      "model": "GradientBoosting",
+      "split": "grouped_cv",
+      "R2": 0.47380855835905344,
+      "MAE": 0.18121337492982018,
+      "RMSE": 0.25428791185608995
+    }
+  ],
+  "top_candidates": [
+    {
+      "candidate": "Sn0.99Ag0.01S0.94Se0.06",
+      "min_ZT": 0.5244989093973961,
+      "mean_ZT": 0.6856880405188892,
+      "max_ZT": 0.8004060219295192,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn1S0.94Se0.06",
+      "min_ZT": 0.5236478415159166,
+      "mean_ZT": 0.6968105408443702,
+      "max_ZT": 0.8185181133046041,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.99Sb0.01S0.94Se0.06",
+      "min_ZT": 0.5144441498131035,
+      "mean_ZT": 0.6796082024319776,
+      "max_ZT": 0.797596087712881,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.99Cu0.01S0.94Se0.06",
+      "min_ZT": 0.5103290945571607,
+      "mean_ZT": 0.6768136524935532,
+      "max_ZT": 0.8072816760956824,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.99Co0.01S0.94Se0.06",
+      "min_ZT": 0.5089928273371983,
+      "mean_ZT": 0.6762170366398605,
+      "max_ZT": 0.8121746394164842,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Ag0.03S0.94Se0.06",
+      "min_ZT": 0.508159413048208,
+      "mean_ZT": 0.664442604517835,
+      "max_ZT": 0.7698716521674333,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.99Te0.01S0.94Se0.06",
+      "min_ZT": 0.49186937020051225,
+      "mean_ZT": 0.6491072377264714,
+      "max_ZT": 0.7649012369690427,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.99Ga0.01S0.94Se0.06",
+      "min_ZT": 0.47526193580990145,
+      "mean_ZT": 0.6261139223743839,
+      "max_ZT": 0.7610950874238522,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.99Zn0.01S0.94Se0.06",
+      "min_ZT": 0.4746213178739852,
+      "mean_ZT": 0.6250733878423004,
+      "max_ZT": 0.7621543871343991,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Sb0.03S0.94Se0.06",
+      "min_ZT": 0.473690297863886,
+      "mean_ZT": 0.6122349316702579,
+      "max_ZT": 0.7123648486405117,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.99Fe0.01S0.94Se0.06",
+      "min_ZT": 0.4713746618588013,
+      "mean_ZT": 0.6257472877556648,
+      "max_ZT": 0.7665740316367702,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Zn0.03S0.94Se0.06",
+      "min_ZT": 0.4639551128397271,
+      "mean_ZT": 0.6127349022496201,
+      "max_ZT": 0.7393746260304203,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Te0.03S0.94Se0.06",
+      "min_ZT": 0.4623310048766934,
+      "mean_ZT": 0.6077908975116434,
+      "max_ZT": 0.7087791246111944,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Cu0.03S0.94Se0.06",
+      "min_ZT": 0.45954784868177817,
+      "mean_ZT": 0.6019500681955744,
+      "max_ZT": 0.7207165326668465,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Ga0.03S0.94Se0.06",
+      "min_ZT": 0.45921244112893506,
+      "mean_ZT": 0.6029011741567059,
+      "max_ZT": 0.7381359446343232,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn1S0.88Se0.12",
+      "min_ZT": 0.45745100396205113,
+      "mean_ZT": 0.5826994630356805,
+      "max_ZT": 0.6958523791493831,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Fe0.03S0.94Se0.06",
+      "min_ZT": 0.4469471918744485,
+      "mean_ZT": 0.5899561725691607,
+      "max_ZT": 0.716536461564272,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Co0.03S0.94Se0.06",
+      "min_ZT": 0.44383999932871554,
+      "mean_ZT": 0.59117473856769,
+      "max_ZT": 0.7148393413722997,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.97Cu0.03S0.97Se0.03",
+      "min_ZT": 0.4321202035343433,
+      "mean_ZT": 0.565244928015274,
+      "max_ZT": 0.6987659677848886,
+      "all_T_ge_1": false
+    },
+    {
+      "candidate": "Sn0.99Na0.01S0.94Se0.06",
+      "min_ZT": 0.42807082281732145,
+      "mean_ZT": 0.5859876598294191,
+      "max_ZT": 0.7173179528165827,
+      "all_T_ge_1": false
+    }
+  ],
+  "warning": "Candidate predictions are model extrapolations; no experimental/DFT stability validation was performed."
+}
