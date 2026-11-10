@@ -7,6 +7,9 @@ This extension uses the full supplied dataset collection to model measured ZT an
 ```powershell
 python -m pip install -r requirements.txt
 python src/run_advanced.py --dataset-root "C:\Users\kraj8\Dropbox\Ms thesis\Research paper\Datasets" --out-dir outputs
+
+# PF/κ-based check for Sn0.99Ag0.01S0.94Se0.06
+python src/predict_target_pf_kappa.py
 ```
 
 ## Main outputs

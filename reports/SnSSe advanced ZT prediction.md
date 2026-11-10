@@ -42,3 +42,9 @@ python src/run_advanced.py --dataset-root "C:\Users\kraj8\Dropbox\Ms thesis\Rese
 ```
 
 The principal scientific limitation is that the candidate compositions are outside the measured training trajectories. DFT, phonon, thermodynamic and experimental checks are required before any candidate can be considered physically validated.
+
+## Requested Ag-doped target: PF and formula-based ZT
+
+The exact composition Sn₀.₉₉Ag₀.₀₁S₀.₉₄Se₀.₀₆ is not present as a measured row in the supplied local data or in the Crossref search performed for this check. The nearest measured baseline is SnS₀.₉₄Se₀.₀₆, with PF = 0.0042106 W m⁻¹ K⁻² and ZT = 0.495 at 300 K, PF = 0.0031595 W m⁻¹ K⁻² and ZT = 0.738 at 423 K, and PF = 0.0019163 W m⁻¹ K⁻² and ZT = 0.826 at 573 K (ESTM source, DOI 10.1126/science.aax5123).
+
+To answer the PF request, separate ExtraTrees models were fit to the measured PF and κ columns and their outputs were combined with ZT = PF·T/κ. For Sn₀.₉₉Ag₀.₀₁S₀.₉₄Se₀.₀₆, the PF/κ-derived model gives PF = 3.708, 3.380, 3.075, 2.721, 2.296, 1.964, 1.849 and 1.751 mW m⁻¹ K⁻² at 300, 350, 400, 450, 500, 550, 573 and 600 K, respectively. The corresponding formula-based ZT estimates are 0.464, 0.563, 0.655, 0.712, 0.771, 0.813, 0.825 and 0.879. These are model extrapolations, not exact measurements; an exact ZT requires measured PF and κ for this composition. The complete table is `sn-s-se-advanced/outputs/tables/target_ag01_pf_kappa_zt.csv`, and the model-validation metrics are in `pf_kappa_model_metrics.csv`.
