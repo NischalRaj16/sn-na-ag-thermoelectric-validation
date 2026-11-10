@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.DS_Store
+
+# Local source downloads and private copies of the supplied paper
+*.pdf
+*.html
+article_crossref.json
+crossref.json
+figshare.json
+nature.html
+nature_text.txt
+

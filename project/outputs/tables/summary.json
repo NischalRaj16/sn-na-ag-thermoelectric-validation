@@ -1,0 +1,31 @@
+{
+  "n_rows": 35,
+  "n_compositions": 5,
+  "temperatures_K": [
+    300,
+    323,
+    373,
+    423,
+    473,
+    523,
+    573
+  ],
+  "best_grouped_cv_model": {
+    "MAE": 0.16525241164960955,
+    "RMSE": 0.19476903284337946,
+    "R2": 0.785258901318591,
+    "model": "ExtraTrees",
+    "cv": "GroupKFold_by_composition",
+    "n": 35,
+    "MAE_mean": NaN,
+    "RMSE_mean": NaN,
+    "R2_mean": NaN,
+    "MAE_sd": NaN,
+    "RMSE_sd": NaN,
+    "R2_sd": NaN
+  },
+  "formula_max_abs_PF_residual_pct": 0.01673757778536061,
+  "formula_max_abs_ZT_residual_pct": 0.08083661010830333,
+  "peak_x03_ZT_300_600K": 1.9974571012389282,
+  "peak_x03_T_K": 573
+}

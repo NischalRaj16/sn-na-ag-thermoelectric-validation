@@ -1,0 +1,1310 @@
+===PAGE 1===\nArticle https://doi.org/10.1038/s41467-026-77691-x
+Efﬁcient power generation near room
+temperature in earth-abundant
+thermoelectric tin sulﬁde via lattice ordering
+Muhammad Yusuf Fakhri 1,2,3,4, Abhishek Ghosh1 , Wei-Ching Lai5,
+Duc-Long Nguyen6, Hans Hong-Ming Jheng1, Suneesh Meledath Valiyaveettil1,
+Peramaiyan Ganesan7, Raman Sankar 7, Ching-Yueh Huang 8,
+Chien-Ching Chang8, Cheng-Maw Cheng 8, Chien-Neng Liao 5,9,
+Bo-Chia Chen10,H s i n - J a yW u1,10,Z i - L i a n gY a n g11,Y a - P i n gC h i u11,
+Ming-Hao Lee 4,12,M i n g - W e nC h u4,12,S h i nS a t o13,K e iH a y a s h i13,
+Carmelo Prestipino 14, Emmanuel Guilmeau 14, Li-Chyong Chen 4,11,12 &
+Kuei-Hsien Chen 1,4
+The inefﬁcient carrier transport of earth-abundant tin sulﬁde (SnS), arising
+from its intrinsically low crystal symmetry, limits its thermoelectric perfor-
+mance at low temperatures. Here, the substitutional Ag+ doping modiﬁes the
+Na-doped SnS crystal structure by reinforcing lattice dynamical anisotropy
+and enhancing in-plane transport properties. Concurrently, the reconstructed
+valence-band structure evolves into a modulated multiband conﬁguration,
+increasing the density-of-states effective mass while preserving high carrier
+mobility. The resulting highly metallic conductivity combined with high
+thermopower yields the room-temperature power factor of ~101µWc m−1K−2 in
+Sn0.96Na0.01Ag0.03S single crystals. Coupled with the intrinsically low thermal
+conductivity of SnS, the optimized crystal achieves the ﬁgure of merit (zT)o f
+~1.06 at 300 K and ~2.0 at 573 K, delivering a conversion efﬁciency of ~3.3% and
+an output power density of ~0.31 W cm−2 in a single-leg module under a 243 K
+temperature gradient. These results demonstrate the effectiveness of crystal
+structure modiﬁcation and multiband engineering in SnS and establish it as a
+highly promising low-cost thermoelectric material for near-room-temperature
+energy conversion.
+Thermoelectric (TE) devices offer a unique solid-state route for heat-
+to-electricity conversion, enabling compact and maintenance-free
+energy harvesting via the Seebeck effect. Conversely, the Peltier effect
+provides on-chip and electronics cooling without the need for
+refrigerant1,2. Despite these inherent advantages, the widespread
+deployment of thermoelectrics has been hindered by the sluggish
+progress in developing the conversion efﬁciency of the semiconductor
+materials, which is determined by the dimensionless ﬁgure of merit,
+zT = σS2T/(κl+κe), where T i st h ea b s o l u t et e m p e r a t u r e3,4.T h et h r e e
+transport parameters, electrical conductivity (σ), Seebeck coefﬁcient
+(S), and the thermal conductivity from the electronic part ( κe), are
+strongly interdependent, making the optimization challenging.
+Therefore, gainingzT typically focuses on minimizing the independent
+variable of lattice thermal conductivityκl 5, while simultaneously max-
+imizing the power factor (PF = σS2)6,7.
+In recent years, investigations on high-performance TE materials
+operating near room temperature (RT) have intensiﬁed, as evidenced
+by the substantial progress in several systems, including Mg 3(Bi,
+Received: 23 January 2026
+Accepted: 27 August 2026
+Check for updates
+A full list of af ﬁliations appears at the end of the paper. e-mail: ghoshabhishekiitd@gmail.com; chenlc@ntu.edu.tw; chenkh@pub.iams.sinica.edu.tw
+Nature Communications|        (2026) 17:10803 1
+1234567890():,;
+1234567890():,;\n\n===PAGE 2===\nSb)2–based alloys 8,9, Heuslers 10,11, and other emerging
+chalcogenides12,13. Parallel efforts in ﬂexible and microscale TE plat-
+forms have further expanded the scope of thermoelectrics for wear-
+able and on-chip cooling applications 14. However, to date, the
+feasibility of commercialized devices still relies predominantly on
+Bi2Te3-based materials, whose dependence on tellurium presents cri-
+tical challenges due to its scarcity, high cost, and toxicity 15,16.T h i s
+urgency to move away from tellurium has motivated the exploration of
+alternative systems based on earth-abundant and environmentally
+benign elements capable of delivering competitive performance.
+In this regard, layered tin chalcogenides, including tin selenide
+(SnSe)17–19 and tin sulﬁde (SnS)20,21, have emerged as highly attractive
+candidates delivering highzT values for low to mid-temperatures. SnS,
+while structurally analogous, offers practical advantages, including
+lower toxicity, lower cost, and greater elemental abundance20,21.A l i o -
+valent doping by substitutional cations (Na+ and Ag+) has been proven
+effective for tailoring the carrier density and enhancing p-type TE
+efﬁciency22–25. On the other hand, isovalent doping at the S site by Se
+promotes the enhancement ofPF through band structure modiﬁcation
+and κl reduction by lowering the phonon group velocity26,27. However,
+in conventional polycrystalline SnS, the peak TE performance typically
+appears at elevated temperatures, mainly due to strong carrier scat-
+tering at grain boundaries that limits carrier mobility (μ) near RT. This
+effect is further reinforced by the structural phase transition from the
+low-symmetry Pnma phase to the high-symmetry Cmcm phase at high
+temperature, which enhances μ and shifts optimal performance
+toward higher temperatures 25,27. In contrast, the single-crystalline
+counterpart eliminates grain-boundary scattering and exposes the
+intrinsic transport behavior of the lattice, enabling superior TE per-
+formance near RT. For example, SnS0.9Se0.1, optimized by controlled
+sulfur enrichment through SnS2 addition, exhibits a power factor of
+~58 μWc m −1 K−2 at 300 K and reaches a peak zT of ~1.6 at 573 K 28.
+However, these strategies, which primarily relied on increasing the
+carrier concentration (n), inevitably compromisedμ due to Sn vacan-
+cies, thereby limiting further advancement near RT.
+This limitation motivated us to implement an aliovalent co-doping
+strategy in single-crystalline SnS that preserves efﬁcient carrier trans-
+port even at elevated n, owing to valence-band reconstruction. Na⁺ is
+ﬁrst introduced in this SnS to regulate the hole concentration, pro-
+viding a direct handle on band degeneracy. As illustrated in Fig. 1a,
+pristine SnS exhibits four valence bands (VBs) distributed along the
+Y–Γ–Z–U directions in momentum space, with their maxima located
+relatively close to the Fermi level. However, n achieved by Na doping
+alone is insufﬁcient to activate all VBs for multi-valley transport, due to
+the relatively large band offset (~0.1 eV≈ 4 kBT). To address this, Ag⁺ is
+introduced as a secondary dopant to further engineer the valence-
+band structure.
+Higher Ag concentrations enhance the band evolution, where VB3
+begins to converge and merge with VB1 into a single dispersive feature,
+as conﬁrmed by angle-resolved photoemission spectroscopy (ARPES).
+Qin et al. reported a similar phenomenon in Pb-alloyed SnSe, known as
+a “pudding-mold” band structure arising from multiband synglisis 18.
+While similar modulation has been demonstrated in SnSe, this work
+presents an effective strategy for valence-band reconstruction in
+lower-cost, more environmentally friendly SnS single crystals29. Addi-
+tionally, the merging band ﬂattens the valence-band maximum,
+enhancing the effective mass ( m⁎) while preserving high μ by sup-
+pressing intervalley scattering, with additionalμ gains arising from the
+convergence of the light band (VB3) at the Y –Zv a l l e y s19,27. The band
+convergence, arising from crystal structure modi ﬁcation, is accom-
+panied by a reduced deformation potential ( Ξ), enabling ef ﬁcient
+carrier transport even within a ﬂattened band structure. This
+0
+2
+4
+6
+8
+0.00 0.01 0.02 0.03 0.04
+2.0
+2.4
+2.8
+3.2
+3.6
+( w / l)x1 0 2
+w / l
+Ag content ( x)
+nH x1 019(cm-3)
+Sn0.99-xNa0.01AgxS
+Carrier concentration ( nH)
+at 300 K
+300 450 600 750 9000.0
+0.5
+1.0
+1.5
+2.0
+2.5zT
+Temperature (K)
+SnS0.9Se0.1
++SnS2
+Liu et al.28
+SnS0.91Se0.09
+He et al.27
+Na-SnS
+Wu et al.20
+Na-SnS
+He et al.21
+zTavg /g124 1.57
+Sn0.96Na0.01Ag0.03S
+This work
+Y ZU U ZY
+Energy (eV) L H
+Heavy Ag incorporationPristine band structure Multiband modulation
+1 2
+34
+4 1+3 2
+a
+bc
+Carriers Sn S Ag
+Fig. 1 | Multivalence band reconstruction and optimization of TE properties in
+Sn0.99-xNa0.01AgxS single crystal. a Schematic illustration of the electronic band
+evolution in SnS under Ag incorporation (x). The crystal-structure modiﬁcation
+induced by Ag doping enables more effective carrier transport arising from higher
+structural symmetry (θH), compared with the pristine structure with lower
+symmetry (θL > θH). b The calculatedµw/κl under the variation of Ag content (x)a n d
+carrier concentration (nH). c Temperature-dependentzT compared with those
+reported in SnS single crystals20,21,27,28. The error bars represent propagated
+uncertainties calculated using the standard deviations (SDs) of the measured
+transport properties.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 2\n\n===PAGE 3===\nmodulated valence-band con ﬁguration in SnS simultaneously pro-
+motes higher carrier mobility ( μ) and enhances the density-of-states
+(DOS) effective mass,md ⁎. As a result, the intrinsic coupling betweenμ
+and md ⁎ is effectively mitigated, yielding a high weighted mobility,
+μw ≈ μ (md ⁎me) 3/2, of ~1286 cm² V−1 s−1 at RT.
+Within this low-temperature r ange, the lattice thermal con-
+ductivity (κₗ) exhibits a modest reduction arising from lattice-structure
+modiﬁcation, speciﬁcally Sn –S bond-angle distortion and direction-
+dependent phonon softening, which strengthens phonon scattering
+while leaving σ essentially unaffected. As shown in Fig. 1b,
+Sn0.99−xNa0.01AgxS single crystals exhibit a signiﬁcant enhancement in
+μw/κl, yielding a high quality factor (B ∝ μw/κl) at RT. The pronounced
+increase in μw/κl with Hall carrier concentration ( nH) indicates a
+synergistic balance between charge transport and phonon scattering.
+Consequently, our p-type Sn0.96Na0.01Ag0.03S achieved a zT peak of ~2
+at 573 K (Fig. 1c), surpassing those of previously reported single
+crystals20,21,27,28 and establishing this system as the best-performing tin
+sulﬁde–based TE material to date.
+Results and Discussion
+Enhanced TE transport properties
+Figure 2 summarizes the TE transport properties measured along the
+crystallographic b-axis, which exhibits the highest performance in this
+system20,21. High-quality single crystals were synthesized using a
+modiﬁed Bridgman method and subsequently cut into well-de ﬁned
+geometries for transport measurements (see Supplementary Fig. 1).
+Phase conﬁrmation and crystallographic orientation were conﬁrmed
+by X-ray diffraction and Laue back-reﬂection analysis (Supplementary
+Figs. 2 and 3), which veri ﬁed the orthorhombic Pnma structure and
+accurately resolved the principal crystal axes. Ag incorporation indu-
+ces a pronounced evolution ofS (Fig. 2a), which increases from ~224 to
+~246 µVK −1 at RT as Ag concentration rises from 0 to 0.04, despite the
+simultaneous rise in measured nH.M o r e o v e r ,σ at RT improved gra-
+dually up to ~1700 S cm −1 for x =0 . 0 3 ( F i g .2b), which is the highest
+value reported to date among SnS single crystals 27,28. The modest
+decrease ofσ with temperature reﬂects the expected acoustic-phonon
+transport, consistent with T−1.5 behavior of μw s h o w ni nF i g .2bi n s e t .
+Despite the large Ag nominal (x) in this compound, the positive trend
+of σ and nH conﬁrmed the successful cationic substitution in the
+crystals. However, with further increase in Ag concentration, Ag
+aggregation becomes more pronounced, as revealed by the elemental
+mapping results (Supplementary Figs. 4 and 5 and Supplementary
+Table 1). In particular, microscale Ag-rich regions become clearly
+observable forx = 0.04, leading to reductions in bothnH and μw, likely
+due to the reduced ef ﬁciency of electrically active Ag acceptors with
+enhanced carrier scattering induced by the aggregated regions.
+Meanwhile, Agx Sny -related impurity phases are barely detectable in
+the synchrotron radiation powder X-ray diffraction (SR-PXRD) pat-
+terns (Supplementary Fig. 6). The possible SnS 2 secondary phase
+associated with Sn deﬁciency coincides with the main (400) diffraction
+peak of SnS, making its identi ﬁcation challenging. Overall, the sub-
+stantial improvement of σ and S resulted in the enhancement of PF
+through this Ag incorporation (Fig. 2c). Consequently, the maximum
+PF reached ~101 μWc m−1 K−2 at 300 K for x = 0.03, a value essentially
+higher than the high performance reported for the SnS and SnSe single
+crystal18,28.
+For thermal transport measurements, the total thermal con-
+ductivity (κtot) was determined from the measured thermal diffusivity,
+heat capacity, and density (Supplementary Fig. 7 and Supplementary
+Table 2). As shown in Fig. 2d, κtot decreases with increasing tempera-
+ture for all compositions due to increased phonon–phonon scattering
+(Umklapp). Ag incorporation leads to a slight change ofκtot across the
+entire temperature range, though the variation remains modest com-
+pared to the SnS crystal (x = 0). The electronic contribution to thermal
+300 400 500 600
+0.6
+1.2
+1.8
+2.4
+3.0(W m-1 K-1)
+Temperature (K)
+x =0
+x = 0.01
+x = 0.02
+x = 0.03
+x = 0.04
+Callaway's model
+U+P
+T -1
+ltot
+300 400 500 600200
+240
+280
+320
+360S (/g80VK -1)
+Temperature (K)
+x =0
+x =0 . 0 1
+x =0 . 0 2
+x =0 . 0 3
+x =0 . 0 4
+300 400 500 600
+4
+8
+12
+16
+20x1 02 (S cm-1)
+Temperature (K)
+300 400 500 6000
+4
+8
+12
+16w x1 02(cm2 V-1 s-1)
+T -1.5
+300 400 500 600
+25
+50
+75
+100
+PF (/g80Wc m-1 K-2)
+Temperature (K)
+SnS0.9Se0.1 -L i u et al. (Ref. 28)
+Pb-SnSe - Qin et al. (Ref. 18)
+ab
+cd
+Fig. 2 | Temperature-dependent TE transport properties of Sn0.99-xNa0.01AgxS
+single crystals with different Ag contents (x). a Seebeck coefﬁcient (S); the inset
+shows a Bridgeman-grown single-crystal forx =0 . 0 3 .b Temperature-dependent
+electrical conductivity (σ) and calculated weighted mobility (µw) shown in the inset.
+c Power factor (PF) compared with benchmark values reported for SnSe and SnS
+single crystals18,28. The error bars represent propagated uncertainties derived from
+the SDs of the measured S and σ. d Total thermal conductivity (κtot) and lattice
+thermal conductivity (κl) obtained by subtracting the electronic contribution
+(κe) from κtot; dashed lines represent the T−1 dependence typical of phonon scat-
+tering, and the thick transparent green line is theκl simulation by using Callaway’s
+model with Umklapp (U) and point defects (P) parameters. The error bars represent
+the SD of the thermal-conductivity measurements.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 3\n\n===PAGE 4===\ntransport was evaluated by calculating the Lorenz number (L)u s i n gt h e
+multiple-parabolic-band (MPB) model and estimating the electronic
+thermal conductivity (κe = LσT), as shown in Supplementary Fig. 8. The
+corresponding sensitivity analysis of the extracted lattice thermal
+conductivity (κl) with respect to the Lorenz-number estimation is
+provided in Supplementary Fig. 9. Applying the relation (κl = κtot – κe),
+the extracted κl reveals a clear reduction with increasing Ag con-
+centration, particularly for x = 0.03. This suppression arises from
+enhanced phonon scattering due to mass ﬂuctuation and local lattice
+strain introduced by Ag substitution 30,31, consistent with Callaway ’s
+simulation (Supplementary Methods) of κl.T h eo b s e r v e dT−1 further
+conﬁrms Umklapp scattering as the dominant heat transport
+mechanism32.
+Modiﬁcations in the crystal structure
+To conﬁrm the TE properties associated with crystal structure mod-
+iﬁcations, we investigated the structural evolution using high-
+resolution SR-PXRD with quantitative structural analysis, through
+Rietveld reﬁnement, as shown in Supplementary Fig. 10. The lattice
+parameters were evaluated by Le Bailﬁt to decorrelate the information
+with respect to the structure (see results in Supplementary
+Tables 3 and 4). A key indicator of structural change is the angle ( θ)
+between the Sn –S bond and the a-axis, calculated from the re ﬁned
+atomic positions. As shown in Fig. 3a, θ progressively decreases with
+increasing Ag content, con ﬁrming a systematic modi ﬁcation of the
+crystal structure. Qin et al. reported similar structural response in Pb-
+and Sr-doped SnSe18,19, exhibiting enhanced in-plane electrical trans-
+port associated with increased crystal symmetry arising from θ
+reduction.
+Further structural insight with Sn K-edge X-ray absorption near-
+edge structure (XANES) of Sn0.96Na0.01Ag0.03S shows a subtle shift of
+the spectrum edge toward higher energy relative to Ag-free SnS
+(Fig. 3b). This behavior indicates only a slight modiﬁcation of the local
+Sn electronic environment by dopant incorporation, consistent with a
+x =0
+x =0 . 0 1
+Intensity (a. u.)
+x =0 . 0 2
+x =0 . 0 3
+80 120 160 200 240
+Raman Shift (cm -1)
+x =0 . 0 4
+A3 gA2 gB3gA1 g
+0123456
+Exp.
+Fitting
+(R)| ( -3)
+Radial distance ( )
+Ag K-edge
+Sn K-edge
+Sn0.96Na0.01Ag0.03S
+Exp.
+Fitting
+29160 29250 29340 29430
+Intensity (a. u.)
+Energy (eV)
+x =0
+x = 0.03
+Sn K-edge
+218.0
+218.5
+219.0
+219.5
+0.00 0.01 0.02 0.03 0.04
+161.5
+162.0
+162.5
+163.0
+163.5
+A3 g Mode
+y =- 3 4 . 9x +2 1 9 . 4
+Ag content ( x)
+B3g Mode
+y =- 2 0 . 2 4x +1 6 3 . 4
+93.5
+94.0
+94.5
+95.0
+95.5
+96.0
+190.5
+191.0
+191.5
+192.0
+192.5
+A1 g mode
+y =- 3 5 . 3x +9 5 . 3
+A2 g mode
+y =- 2 5 . 2x +1 9 2 . 2
+0.00 0.01 0.02 0.03 0.04
+8.5
+9.0
+9.5
+10.0
+10.5(o)
+Ag content ( x)
+ab c
+Raman Shift (cm -1)
+A1 g A2 g
+A3 g B3g
+d e f
+Fig. 3 | Crystal structure modiﬁcation in Ag-doped SnS crystal. aThe Sn-S bond
+angle (θ)o fS n0.99-xNa0.01AgxS Pnma phase at 300 K with increasing Ag content (x).
+b Sn K-edge XANES spectra comparing samples without Ag (x =0 )a n dw i t h
+Ag (x = 0.03). c Fourier-transformed EXAFS at Sn and Ag K-edge for
+Sn0.96Na0.01Ag0.03S sample. d Raman spectra of Sn0.99-xNa0.01AgxS single crystals
+(x = 0–0.04) with peak ﬁtting of the characteristic vibrational modes (Ag 1,B 3g,A g 2,
+and Ag 3), resolved using a Gaussian function. e The Raman shift of the dominant
+peaks out-of-plane (Ag 1 and Ag 3) and in-plane (Ag 2 and B3g) modes as a function of
+Ag content (x). The error bars represent the standard errors of the ﬁtted Raman
+peak positions obtained from Gaussianﬁtting. f The corresponding vibrational
+models, with arrows representing the direction of atomic vibrations.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 4\n\n===PAGE 5===\nsmall increase in Debye-Waller factor (σ2)i nS n 0.96Na0.01Ag0.03S sam-
+ple (Seeﬁtting results in Supplementary Figs. 11–13 and Supplementary
+Table 5). Figure 3c compares the extended X-ray absorption ﬁne
+structure (EXAFS) spectra at both the Sn and Ag K-edges for the
+Sn0.96Na0.01Ag0.03S sample. Both Fourier transforms of the EXAFS
+signal show strong similarities, suggesting the successful substitution
+of Ag on the Sn site. Based on such observations, both signals have
+been ﬁtted using SnS as a structural model, allowing an isotropic and
+linear expansion of interatomic distances. In this model, a contraction
+of ~3.7% of Ag –S bond distance with respect to Sn –S distances is
+observed (see Supplementary Table 5). This contraction is consistent
+with the reduction in unit-cell volume determined by X-ray diffraction.
+Raman spectroscopy provides further evidence of lattice dyna-
+mical modiﬁcations induced by Ag incorporation in Sn0.99-xNa0.01AgxS.
+Figure 3d, e present the Raman spectra and the extracted peak posi-
+tions of the out-of-plane (A g 1and A g 3) and in-plane (A g 2 and B 3g)
+vibrational modes as a function of Ag content, with schematic illus-
+trations of the corresponding vibrational patterns shown in Fig. 3f.
+With increasing Ag concentration, all four Raman-active modes exhibit
+a systematic red shift, indicating phonon softening associated with the
+progressive introduction of chemical defects32,33. Notably, the in-plane
+vibrational modes display only slight softening, whereas the red shifts
+of the out-of-plane modes are more pronounced. This anisotropic
+phonon renormalization reﬂects enhanced vibrational anisotropy at
+higher Ag content, characterized by a stronger in-plane vibrational
+component. Such behavior is consistent with the observed structural
+distortions and is expected to reduce the phonon mean free path,
+thereby suppressing the κₗ while preserving favorable electrical
+transport properties34–36.
+In addition, microstructural analysis of the Sn 0.96Na0.01Ag0.03S
+crystal by scanning transmission electron microscopy (STEM) reveals
+local structural features associated with lattice modiﬁcation induced
+by Ag incorporation (Fig.4a–c). High-angle annular dark-ﬁeld (HAADF)
+STEM imaging at higher magniﬁcation clearly shows the displacement
+of Sn atoms (Fig. 4b), consistent with the systematic evolution of the
+Sn–Sb o n da n g l eθ and the accompanying lattice modulation. Atomic-
+resolution imaging in Fig. 4c further identiﬁes dislocation cores and
+locally distorted Sn –S coordination environments, which are corro-
+borated by elemental mapping using electron energy-loss spectro-
+scopy (EELS). The Sn atomic displacements resolved by EELS provide
+direct structural evidence for lattice reconstruction in Ag-doped SnS.
+Such distortions are expected to introduce spatialﬂuctuations in local
+strain gradients, leading to systematic deviations ofθ in layered crystal
+systems37,38. Collectively, these ordered defect motifs are hypothesized
+to shorten the phonon mean free path and suppress the κₗ35,i n
+agreement with the Raman-observed phonon softening and the con-
+currently preserved high electrical conductivity upon Ag
+incorporation.
+Electronic band structure measurement via ARPES
+ARPES measurements were performed at RT using a photon energy of
+92 eV to experimentally probe the evolution of the valence-band
+structure in Sn0.99−xNa0.01AgxS for selected compositions (x =0 ,0 . 0 1 ,
+and 0.03), as shown in Fig. 5a, b. The energy dispersion (E)a l o n gt h e
+Γ–Zm o m e n t u mp a t h(k) was resolved to examine the ﬁrst valence-
+band maximum (VBM1), which predominantly governs the electrical
+transport properties of SnS (Fig.5a). For all compositions, the VBM lies
+close to the Fermi energy ( EF), indicating that SnS is already in a
+degenerate regime. Upon the introd uction of substitutional Ag, the
+valence bands become more clearly distinguishable, revealing a pro-
+nounced evolution of the band structure. Along the Γ–Z k-path,
+another light band appears at relatively lower binding energy (around
+−0.2 eV from EF), here labeled as VB3 (based on the schematic in
+Fig. 1a). The corresponding energy distribution curve (EDC) analysis is
+provided in Supplementary Fig. 14. This band is separated from VB1 by
+approximately 0.2 Å−1 in k-space. Once Ag is introduced, VB3 begins to
+converge, especially forx = 0.03, where it approaches close toEF with a
+signiﬁcantly reduced band offset (ΔE) between VBM1 and VBM3. This
+evolution shifts VBM1 away from the Z-point (by ~0.06 Å−1), conﬁrming
+the k-space alignment of this extremum and indicating the formation
+of a pudding-mold–type band structure18. Such band convergence is
+expected to enhance the effective valence-band degeneracy (Nv). The
+noticeable bandﬂattening results in an increased band effective mass
+(m∗/me), particularly at higher Ag concentrations. Byﬁtting the second
+derivative of the ARPES intensity maps using the E(k) dispersion rela-
+tion (see Eq. (1)i nM e t h o d s ) ,m∗/me values were extracted for different
+Ag contents (see Supplementary Table 6). The Na-doped SnS sample
+(x =0 ) e x h i b i t sm∗/me ≈ 0.34 ± 0.02, which increases to 0.45 ± 0.08 in
+Sn0.96 Na0.01Ag0.03S at VBM1. Consequently, band ﬂattening together
+with enhanced degeneracy (Nv) effectively increasesS, consistent with
+the Pisarenko plot of nH vs S based on the single parabolic band (SPB)
+model (Supplementary Fig. 15). In this plot, Ag-rich samples fall along
+the theoretical line corresponding to a larger DOS effective mass
+(md*= Nv 2/3m*) of 1.97me. This behavior agrees with the Mott relation39
+S ∝ md*Tn-2/3, which indicates that a moderate increase in nH does not
+suppress S due to concurrent enhancement of md*.
+Fig. 4 | Sn 0.96Na0.01Ag0.03S single crystals morphology. a High-resolution
+HAADF-STEM image with an inset selected-area electron diffraction (SAED) pattern
+acquired along the [010] zone axis, conﬁrming the orthorhombic SnS structure
+with indexed diffraction spots.b High-resolution HAADF-STEM image revealing
+local structural distortion marked in the red box. c Further magniﬁed view of the
+distorted region, with an inset showing EELS elemental mapping of Sn (green) and S
+(red) overlaid with the structural model of SnS. The EELS mapping conﬁrms the
+displacement of Sn atoms at the distorted sites.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 5\n\n===PAGE 6===\nElectronic band structure calculation via DFT
+To elucidate the electronic band structure evolution induced by crystal
+structure modiﬁcation and Ag incorporation in Sn0.99-xNa0.01AgxSs i n -
+gle crystals, density functional theory (DFT) calculations were per-
+formed, as shown in Fig.5c, d. The extended band structure along Z-U-
+X and the elemental contributions to the band structure are provided
+in the supplementary Figs. 16 and 17. The corresponding unfolded
+band structures were constructed using 144-atom supercells to directly
+accommodate the experimental compositions (see Supplementary
+methods for the details). For comparison, the SnS band structure is
+calculated and shown in Supplementary Figs. 18 and 19. Relative to the
+SnS unit cell, the unfolded band structure of Sn 70Na1Ag1S72 (Fig. 5c)
+exhibits clear valence-band convergence along the Γ–Yd i r e c t i o n ,
+where the energy offset (ΔE) is reduced from 0.142 to 0.064 eV (Sup-
+plementary Table 7). With further Ag incorporation in Sn 69Na1Ag2S72
+(Fig. 5d), the band features become broader, reﬂecting enhanced band
+mixing near the band edge. The elemental analysis from DFT reveals
+that the valence-band edge is predominantly contributed by Sn atoms,
+0.0
+0.5
+1.0
+ZY
+Sn69Na1Ag2S72
+0.0
+0.6
+1.2
+0.0
+0.5
+1.0
+Energy (eV)
+ZY
+Sn70Na1Ag1S72
+0.0
+0.0 0.5 1.0
+0.0
+0.0 0.5 1.0 0.0 0.5 1.0
+E-E F (eV)
+Z
+x =0
+x =0
+Z
+x =0 . 0 1
+x =0 . 0 1
+Z
+x =0 . 0 3
+x =0 . 0 3
+Max
+Min
+Max
+Min
+E-E F (eV)
+k// ( -1)
+VB1
+VB3
+k// ( -1) k// ( -1)
+a
+b
+cd
+Fig. 5 | Band structure evolution of Sn0.99-xNa0.01AgxS single crystals. a ARPES
+band maps probed by room-temperature ARPES using a photon energy of 92 eV
+along the Γ–Z direction for x =0 , x = 0.01, and x =0 . 0 3 .b Corresponding second-
+derivative intensity maps, highlighting the pronounced band evolution,
+particularly the energy alignment of the third valence band (VB3). The band indices
+follow the schematic in Fig. 1a. c Calculated unfolded band structure of
+Sn70Na1Ag1S72 obtained from DFT. d Unfolded band structure of Sn69Na1Ag2S72.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 6\n\n===PAGE 7===\nwhereas Ag atoms provide only a minor contribution in this energy
+region (see the Supplementary Fig. 17). In pristine SnS, the valence-
+band edge is dominated primarily by the s orbital of Sn atoms.
+Accordingly, the modiﬁcation of the band edge is consistent with the
+experimentally observed shift in binding energy at the Sn K-edge
+XANES of Sn0.96Na0.01Ag0.03S( F i g .3b).
+To further con ﬁrm the band-structure evolution induced by
+crystal-structure modi ﬁcation, particularly the variation of the
+Sn–S bond angle ( θ), we performed additional DFT calculations
+based on the experimentally re ﬁned crystal structure of SnS at
+x = 0. The corresponding unit-cell and ﬁrst Brillouin-zone (BZ)
+schematics are presented in Fig. 6a, b, respectively, while the
+atomic-position information associated with θ variation is pro-
+vided in Supplementary Table 8. The calculated band structures
+with progressively reduced θ reveal the emergence of valence-
+band convergence, as shown in Fig. 6c. Figure 6d summarizes the
+evolution of the energy offsets ( ΔE) between the valence bands,
+where a pronounced convergence of VBM3 toward VBM1 together
+with a slight divergence of VBM2 is observed. The calculated
+evolution rate of the VBM3 energy offset is approximately ~27.6
+per degree, con ﬁrming that the modi ﬁed crystal structure directly
+contributes to the observed band modulation, particularly along
+the Γ–Z direction, consistent with the ARPES observations.
+Multivalley transport simulation
+To correlate the experimentally measured transport properties with
+the band modulation observed by ARPES and DFT, we analyzed the
+relationships among S, Hall carrier concentration ( nH), and Hall
+mobility (μH). The μH values were calculated using Eq. (3.15), with the
+Hall coef ﬁcients provided in Supplementary Fig. 20. Multiple-band
+transport simulations based on the acoustic deformation potential
+(ADP) model40,41 were performed to compare the electrical transport
+behavior of pristine SnS with that of a three-band conﬁguration. In this
+model, the three bands comprise VB(1 + 3), VB2, and VB4, whereas
+pristine SnS contains four separated valence bands with expanded
+energy offsets ( ΔE) for VB3 and VB4, as schematically illustrated in
+Fig. 1a. Details of the calculations are provided in the Supplementary
+Methods, while the relevant parameters, including ΔE, m*, and Ξ in
+Supplementary Tables 7 and 9 –11. Further discussions regarding the
+valence-band (VB) coordinates and the principal m*a r ep r e s e n t e di n
+the Supplementary Discussion.
+As shown in Fig. 7a, the experimental S of the Ag-doped samples
+closely follows the curve corresponding to the modulated three-band
+conﬁguration, indicating that the enhanced S originates from band
+ﬂattening associated with the convergence between VB1 and VB3. The
+introduction of Ag also substantially increases μH, bringing the mea-
+sured values into good agreement with the predictions of the modu-
+lated multiband model, as shown in Fig.7b. The reduced energy offset
+(ΔE) between the two extrema (VB1 and VB4) along the Y–Γ–Zd i r e c t i o n
+increases the contribution of the light-transport valley (VB4), which
+possesses a lower Ξ, resulting in a maximum μH of of ~327 cm² V⁻¹s ⁻¹
+in Sn 0.96Na0.01Ag0.03S. In addition, Boltzmann transport calculations
+(Supplementary Figs. 21 and 22) further support the experimentally
+observed Ag-dependent transport evolution (see Supporting Methods
+for details). Although the calculated conductivity and mobility are
+lower than the corresponding experimental values because of uncer-
+tainties in the state-dependent relaxation-time model and the dis-
+tinction between calculated drift mobility and measured Hall mobility,
+the calculations reproduce the key experimental trend: Ag-induced
+band reconstruction enhances carrier transport relative tox =0 , w i t h
+x = 0.03 providing the optimum balance betweenσ and S.
+To explain the high μH in this material, the valence-band edge of
+SnS exhibits a highly anisotropic electronic structure, as revealed by
+the constant-energy contours and three-dimensional Fermi surfaces
+(Supplementary Figs. 23–27). The hole pocket is strongly dispersive
+along the ( ky) direction, relatively ﬂat along ( kx), and non-parabolic
+along (kz), resulting in anisotropic effective masses and non-spherical
+carrier pockets. Such an anisotropic band topology is advantageous
+for thermoelectric transport because the ﬂatter directions enhance
+md*a n d S, while the more dispersive directions preserve ef ﬁcient
+carrier transport. Together with the increasednH and activation of the
+light bands (VB3 and VB4), this anisotropic multivalley electronic
+structure provides a plausible origin for the simultaneous enhance-
+ment of m*a n dμH (see the supplementary discussion for the details of
+band anisotropy and degeneracy).
+The room-temperature Hall measurements further reveal the
+effectiveness of the doping strategy, whereby bothμH and nH increase
+simultaneously, indicating a mitigation of the conventional trade-off
+0.0
+0.3
+0.6
+0.9
+Energy (eV)
+0
+0.25
+0.5
+0.75
+1.00
+1.25
+1.5
+1.75
+2
+Y ZU R TXS
+1
+3 24
+a
+b
+0.0 0.5 1.0 1.5 2.0
+60
+80
+100
+120EVBM1 - E (meV)
+(degree)
+VBM2 VBM3 VBM4
+c d
+Fig. 6 | Electronic band modulation induced by bond-angle variation in SnS.
+a Crystal structure of orthorhombic SnS, illustrating the layered arrangement of Sn
+and S atoms and the deﬁnition of the crystallographic axes.b Schematic of theﬁrst
+Brillouin zone (BZ) of SnS with the corresponding high-symmetryk-path used for
+the band-structure calculations.c Calculated electronic band structures of pristine
+SnS with systematically varied Sn–S bond angle (θ), showing the evolution of the
+valence-band structure and the emergence of band convergence near the valence-
+band maximum along the Γ–Z direction. d Evolution of the energy offsets (ΔE)
+between VBM1 and the higher valence bands (VBM2–VBM4) as a function of bond-
+angle variation (Δθ). A pronounced convergence of VBM3 toward VBM1 is observed
+with decreasing θ,c o nﬁrming the strong sensitivity of the electronic structure to
+subtle crystal-structure modulation.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 7\n\n===PAGE 8===\nbetween these typically interdependent transport parameters. These
+simulations demonstrate that the improved electrical transport
+properties in Sn 0.96Na0.01Ag0.03S originate from the multiband con-
+ﬁguration induced by band convergence and ﬂattening, highlighting
+its decisive inﬂuence on TE performance41–43.
+Figure of merit (zT) and single-leg module performance
+Through this electronic band structure evolution, a high zT was
+achieved, as shown in Fig. 8a, where Sn 0.96Na0.01Ag0.03S crystals
+attained a zT of ~1.06 at 300 K and a zT peak of ~2 at 573 K. Moreover,
+the zT average of ~1.57 exceeds the latest reported value of p-type SnS
+single crystal27,28. Notably, the maximization ofzT at RT arises from the
+modulated three-band conﬁguration, as supported by the zT simula-
+tions shown in Supplementary Fig. 28. Orientation-dependent mea-
+surements further reveal theb-axis as the optimal transport direction,
+providing the highest zT for this compound, as shown in Supplemen-
+tary Fig. 29. The high zT obtained in Sn 0.96Na0.01Ag0.03Si sr e p r o -
+ducible across independently prepared crystals synthesized using the
+same Bridgman growth procedure, where the room-temperature zT
+values range from 0.98 to 1.08, as shown in Supplementary Fig. 30. To
+further evaluate the thermal stability of the material, repeated
+heating–cooling cycle measurements were performed and showed
+stable thermoelectric performance over multiple cycles up to 573 K
+(Supplementary Fig. 31). In addition, thermogravimetric analysis (TGA)
+and differential scanning calorimetry (DSC) measurements were car-
+ried out to evaluate the thermal robustness and sulfur volatility of the
+crystals, as shown in Supplementary Fig. 32. The TGA results show
+negligible mass loss within the investigated operating temperature
+range, conﬁrming the good thermal stability of the material below
+573 K. Despite the restricted operating temperature window, the
+300 400 500 600
+0.4
+0.8
+1.2
+1.6
+2.0
+2.4zT
+Temperature (K)
+x =0
+x =0 . 0 1
+x =0 . 0 2
+x =0 . 0 3
+x =0 . 0 4
+x =0 . 0 3
+DSC
+0.0 0.2 0.4 0.6 0.8
+0
+5
+10
+15
+20
+25P (mW)
+I (A)
+73 K
+121 K
+170 K
+194 K
+219 K
+243 K
+T
+Pd /g124 0.31 W cm -2
+0.0 0.2 0.4 0.6 0.8
+0.0
+0.7
+1.4
+2.1
+2.8
+3.5(%)
+I (A)
+73 K
+121 K
+170 K
+194 K
+219 K
+243 K
+T
+max /g124 3.3 %
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0zT
+Thermoelectric Sulfides
+zT at 300 - 323 K
+zT max
+This work
+Ag-PbS (Ref. 49)
+CuGaS2-Cu2SnS3 (Ref. 36)
+Mn-Cu12Sb4S13 (Ref. 47)
+CuCl-Bi2S3 (Ref. 43)
+Cu-TiS2 (Ref. 44)
+Cu1.97S( R e f .4 8 )
+Cu4.98Fe0.68S4 (Ref. 45)
+Br-Cu7Sn3S10 (Ref. 46)
+TlCuS (Ref. 35)
+Sn0.96Na0.01Ag0.03S
+ab
+cd
+Fig. 8 | Figure of merit ( zT) value and device performance Sn0.99-xNa0.01AgxS
+single crystals demonstrating state-of-the-art sulﬁde-based TE performance.
+a Temperature-dependentzT. The error bars represent propagated uncertainties
+calculated using the SDs of the measured transport properties.b Benchmark
+comparison of room-temperaturezT and zT peak values with those of previously
+reported sulﬁde-based TE materials35,36,44–49. c Input current (I)v e r s u so u t p u tp o w e r
+(P) for different temperature gradients (ΔT)w i t ha ni n s e ts c h e m a t i co ft h ef a b r i -
+cated single-leg module.d Input current (I) versus conversion efﬁciency (η) under
+different temperature gradients (ΔT).
+Fig. 7 | Multivalley transport simulation comparing theoretical and experi-
+mental electrical transport properties resulting from multiple-band modula-
+tion. a Pisarenko plot of Seebeck coefﬁcient (S) versus Hall carrier concentration
+(nH), compared with theoretical curves from the multiband model at 300 K.
+b Pisarenko plot of Hall mobility (μH)v e r s u snH, with benchmarks from recent
+reports on SnS single crystals included27,28.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 8\n\n===PAGE 9===\nachieved zT peak is substantially superior, establishing
+Sn0.96Na0.01Ag0.03S as one of the best-performing tin-sul ﬁde and
+sulﬁde-based TE materials reported to date35,36,44–49 as summarized in
+Fig. 8b. Overall, this work demonstrates that the effective optimization
+of the interdependent transport parametersσ,S ,a n d κ improves the
+thermoelectric performance of Sn 0.99−xNa0.01AgxSf o rl o w -
+temperature applications.
+Additionally, the TE power generation ef ﬁciency ( η) of this
+SnS material was evaluated in a single-leg module device using a
+miniPEM system. Figure 8c presents the current ( I) vs power ( P),
+under different temperature gradients ( ΔT), with an inset sche-
+matic illustrating the contact-layer con ﬁguration. As shown in
+Fig. 8d, the single-leg module achieved a high η of ~3.3% and
+output power density ( Pd)o f~ 0 . 3 1 W c m−2 under an applied ΔT of
+243 K, which is currently outperforming SnS 0.9Se0.1 performance
+under this ΔT (see the benchmark in Supplementary Fig. 33a). The
+corresponding measured heat ﬂow ( Qh), uncertainty in Qh,
+experimental ef ﬁciency, and theoretical ef ﬁciency are summar-
+ized in Supplementary Table 12.
+Despite the high PF obtained for the optimized SnS crystal, the
+experimentally achieved Pd reaches only approximately 23% of the
+ideal value predicted from the measured PF (Supplementary
+Figs. 33b and 34), indicating that only about 18–23% of the intrinsic PF
+capability is effectively utilized in the present device con ﬁguration50.
+Moreover, the deviceZT, inversely estimated from the experimentalη
+in Eq. ( 6), remains relatively low (~0.26 at ΔT = 243 K), corresponding
+to only 17% of the estimated average zT, as shown in Supplementary
+Fig. 35. To further clarify this discrepancy, we analyzed the resistance
+contributions in the fabricated single-leg module. As shown in Sup-
+plementary Fig. 35a, the internal device resistance (Rint)c o n s i s t so ft h e
+bulk resistance of the SnS leg (Rleg) and the parasitic/contact resistance
+(Rc). The extracted Rc/Rint ratio is approximately 66 –71% over the
+measured temperature range (Supplementary Fig. 35b), indicating that
+the present module performance is primarily limited by contact
+resistance. Therefore, further optimization of the SnS/Ni(P)/solder/Cu
+contact structure is expected to signi ﬁcantly improve the practical
+conversion efﬁciency.
+In summary, the distorted crystal structure associated with the
+bond angle (θ) in SnS governs the transport physics over a wide tem-
+perature range, and reconstructing this structural motif enables highly
+metallic transport that bene ﬁts low-temperature TE performance.
+Upon structural modiﬁcation through Ag incorporation, multivalence-
+band convergence facilitated ef ﬁcient charge transport in ﬂattened
+bands with a low Ξ, preserving high μ while increasing m*. Conse-
+quently, the strong coupling effect between σ and S was mitigated in
+Sn0.96Na0.01Ag0.03S single crystal, enabling the realization of a highPF
+of ~101 µWc m−1 K−2 at RT. In this study, the aliovalent co-doping strat-
+egy with Na ⁺ and Ag⁺ successfully established an emerging platform
+for SnS-based crystals, in which structural modulation directly gave
+rise to favorable TE properties. Notably, a high zT peak of ~2 at 573 K
+was realized within a sul ﬁde-based system, highlighting a signi ﬁcant
+advance in earth-abundant and environmentally friendly thermo-
+electrics near RT.
+Methods
+Single crystal synthesis
+Puriﬁed Sn pellets (99.99 wt.% pure) and Na ingot (99.99 wt.%
+pure) from Ultimate Materials Technology, S powder (99.98 wt.%
+pure) from Sigma-Aldrich, and Ag powder (99.999 wt.% pure)
+from Thermo ﬁscher Puratronics were weighed carefully and cal-
+culated according to the stoichiometry of (Ag or x =0 ,1 ,2 ,3 ,a n d
+4a t .% )S n 0.99-xNa0.01AgxS. All weighted precursors were prepared
+inside the carbon-coated quartz tube and sealed under ~50 mTorr
+vacuum with an outer larger quartz tube to avoid oxidation from
+the high-temperature synthesis inside the furnace. The mixed
+materials were annealed to 1273 K using a slow heating ramp and
+held at this temperature for 3 days. Subsequently, the samples
+were cooled to room temperature inside the furnace. The
+resulting polycrystalline SnS ingots were crushed, ground, and
+sieved through a 200-mesh screen to ensure compositional uni-
+formity. Approximately 20 g SnS ﬁne powder was then trans-
+ferred into a 13 mm inner-diameter carbon-coated conical quartz
+tube and double-sealed with a larger outer quartz tube. For
+single-crystal growth, the sealed samples were placed in a vertical
+furnace. The sample was held in the hot zone and heated to
+1273 K for 24 h, then maintained at this temperature for an addi-
+tional 2 days to ensure complete melting, followed by transfer to
+the cold zone at 1073 K using a pulling parameter corresponding
+to a cooling rate of 1 K h −1. The entire single-crystal growth pro-
+cess required approximately 14 days to obtain a crystal with a
+length of ~5 cm. After growth, the crystals were naturally cooled
+to room temperature inside the furnace for 1 day.
+Material characterizations
+The phase purity of the as-synthesized crystals was characterized using
+powder X-ray diffraction (XRD) performed on a Bruker D2 dif-
+fractometer equipped with Cu K α radiation ( λ = 1.5406 Å). Crystal
+orientation was examined using electron backscattered diffraction
+(EBSD) combined with ﬁeld-emission scanning electron microscopy
+(FESEM; JEOL JSM-7800F) and Laue X-ray diffraction. High-angle
+annular dark-ﬁeld scanning transmission electron microscopy com-
+bined with high-resolution electron energy-loss spectroscopy (HAADF-
+STEM-EELS) was performed using a JEOL JEM −2100F transmission
+electron microscope equipped with aberration correction. STEM spe-
+cimens were prepared by focused ion beam (FIB) milling at iTek
+Technology Co., Ltd.
+Raman spectroscopy and ﬁtting procedure
+Raman spectra were measured using a custom-built confocal ﬁber
+microscope integrated with a HORIBA iHR550 spectrometer, equipped
+with a Syncerity BI-NIR CCD camera (wavelength range: 400–1075 nm)
+and a 532 nm diode laser as the excitation source. The scattered signals
+were collected using a photomultiplier detector (PicoQuant PMA192;
+wavelength range: 230–920 nm). Measurements were performed on
+the basal plane of small SnS bulk crystals with dimensions of
+approximately 4 × 4 mm 2 in size. For each sample, spectra were
+acquired from up to ﬁve different locations with an exposure time of
+approximately 90 s per spot. The ﬁnal Raman spectrum was obtained
+by averaging the spectra collected from different spots. Raman peak
+positions were determined by Gaussian ﬁtting using OriginLab soft-
+ware, yielding a ﬁtting quality with residuals corresponding
+to R² ≈ 0.99.
+Synchrotron radiation measurements
+Most synchrotron-based experiments were carried out at the
+Taiwan Photon Source (TPS) of the National Synchrotron Radia-
+tion Research Center (NSRRC), Taiwan. High-energy (20 keV)
+synchrotron X-ray diffraction was used to collect powder dif-
+fraction data. For Rietveld re ﬁnement, crystal powders were
+prepared by hand grinding and sieved through a 400-mesh
+screen to ensure uniform particle size for all samples. For ele-
+mental mapping, bulk single-crystal specimens were analyzed
+using nano-focused X-ray ﬂuorescence (XRF) at TPS beamline 21 A
+with a polychromatic X-ray source covering an energy range of
+5–30 keV. X-ray absorption spectroscopy (XAS) measurements at
+the Sn K-edge were conducted at TPS beamline 44A1 in trans-
+mission mode using ground SnS powder as the specimen. An
+energy scan operating in step mode was employed to acquire
+optimized absorption spectra at the Ag K-edge in ﬂuorescence
+detection.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 9\n\n===PAGE 10===\nXRD reﬁnement, XAS ﬁtting and crystal structure modeling
+PXRD patterns were reﬁned by Rietveld analysis using the FullProf and
+WinPlotr software packages51,52. The shape of the diffraction peaks was
+modeled using a Thompson −Cox−Hastings pseudo-Voigt pro ﬁle
+function. Zero-point shift and asymmetry parameters were system-
+atically reﬁned, and the background contribution was manually esti-
+mated. Lattice parameters, atomic positions, and isotropic
+displacement parameters (i.e., Debye−Waller factors: Biso) wereﬁnally
+reﬁned. For extracting the EXAFS ﬁtting parameters, reduction and
+modeling of the data from XAS measurements were realized using the
+IFEFFIT code as implemented in the Athena and Artemis software 53.
+Crystal-structure models presented in the ﬁgures were generated
+using VESTA from the crystallographic information ﬁles (CIFs)
+obtained from the structural reﬁnement54.
+Band structure measurement via angle-resolved photoemission
+spectroscopy (ARPES)
+ARPES measurements were performed at beamline BL21B1 of the Tai-
+wan Light Source (TLS) and beamline BL39A1 of the Taiwan Photon
+Source (TPS) at the National Synchrotron Radiation Research Center
+(NSRRC). Photoemission spectra were collected using hemispherical
+analyzers (Scienta R4000 at TLS and DA30L at TPS) with a ± 15° col-
+lection angle and an angular resolution of 0.5°. The base pressure
+during measurements was better than 9.1 × 10 −11 torr. Single-crystal
+samples were cleaved in situ and immediately transferred to the
+measurement chamber. The beam spot sizes were approximately
+120 μm at TLS BL21B1 and 10 μm at TPS BL39A1. All spectra were
+acquired at room temperature using linearly horizontal polarized light
+with a photon energy of 92 eV. After collecting the ARPES spectra, the
+band effective mass (m*) is calculated with this relation:
+1
+m* = 1 ℏ2 d2E dk2 ð1Þ
+where ℏ is the reduced Planck constant and E(k) is the energy disper-
+sion as a function of wave vectork.T h eﬁtting was performed using the
+second derivative of the ARPES spectra, in which the local minima
+correspond to the extrema of the valence-band dispersion.
+Thermoelectric transport measurement
+For the electronic transport property measurement, the cut specimens
+were prepared with parallelepiped shapes (3 × 3 × 10 mm3). The elec-
+trical conductivity σ and Seebeck coef ﬁcient S were simultaneously
+measured under a Helium gas atmosphere on an Analyser ZEM-3
+( U L V A C )w i t ha ne s t i m a t e d/C245% measurement uncertainty for each
+parameter. The Hall Measurement was performed using the Quantum
+Design physical property measurement system (PPMS) AC transport
+5-point probe with a variable magnetic ﬁeld from −5 to 5 T. The Hall
+carrier concentration (nH) and Hall mobility (μH) were calculated with
+the measured Hall coefﬁcient (RH) by using the following relations:
+nH = 1 eRH ð2Þ
+μH = σRH ð3Þ
+where e represents the electron charge.
+From measured σ and S, the weighted mobility can be calculated
+by the following eq.55:
+μW = 3h3σ 8πeð2mekBTÞ3=2 exp Sjj kB =e /C0 2 hi 1+ e x p /C05 Sjj kB =e /C0 1 /C16/C17hi + 3 π2 Sjj kB =e 1+ e x p 5 Sjj kB =e /C0 1 /C16/C17hi 2 4 3 5
+ð4Þ
+where h, kB,a n d me are Planck’s constant, Boltzmann’s constant, and
+mass of an electron, respectively.
+For the thermal transport property measurement, a/C24 1m mt h i c k
+square-shaped specimen (6 × 6 mm 2) was prepared. The measure-
+ments of thermal diffusivity (D)a n ds p e c iﬁch e a t(CP ) were performed
+b yu s i n gal a s e rﬂash method (LFA 457, NETZSCH) with pyroceram as
+the reference and standard calibration. The thermal conductivity is
+calculated from Dulong-Petit Law usingκtot = DCP ρ, where the density
+(ρ) is obtained from the conventional Archimedes method using a
+Mettler Toledo balance. The lattice thermal conductivities were cal-
+culated from the equation κl = κtot /C0 κe. The electronic thermal con-
+ductivity (κe)w a sd eﬁned from the Wiedemann–Franz law as κe = LσT,
+where L is the Lorenz number calculated by a multiple parabolic band
+(MPB) model. The uncertainty of thermal conductivities with these
+measurement systems was estimated to be /C245%.
+From σ,S , κtot,a n d T,t h e ﬁgure of merit, zT,i sd e ﬁned. The
+average thermoelectric ﬁgure of merit ( zTavg) over the temperature
+range was estimated using the integral approximation:
+zT avg = 1 Th /C0 Tc
+Z Th
+Tc
+zT TðÞ dT ð5Þ
+Where Th and Tc are the hot-side and the cold-side temperatures,
+respectively. The theoretical ef ﬁciency of the thermoelectric device
+can be predicted through thezTavg as the device ZT with this formula:
+η = Th /C0 Tc
+Th
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+1+ ZT
+p
+/C0 1ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+1+ ZT
+p
++ Tc Th ð6Þ
+Lorenz number estimation with multiband model
+An estimation of the Lorenz number ( L) uses the multiple parabolic
+band (MPB) model given by
+Li = kB e /C18/C19 2 ðr +7 =2ÞFr +5 =2ðηiÞ ðr +3 =2ÞFr +1 =2ðηiÞ /C0 ðr +5 =2ÞFr +3 =2ðηiÞ ðr +3 =2ÞFr +1 =2ðηiÞ "# 20 @ 1 A ð7Þ
+where kB is the Boltzmann constant, r is the scattering factor,
+F(ηi) is the Fermi-Dirac integral, and ηi is the reduced Fermi level
+for each band or valley i. For a degenerate semiconductor, the
+transport will be dominated by the acoustic phonon scattering
+mechanism ( r = −1/2). Here, Li value for each contributing valley
+(i) is obtained from the calculated ηi with the measured Seebeck
+coefﬁcient at any temperature. The total Lorenz number is then
+determined by weighting the calculated Li from all contributing
+valleys. Details of the MPB model calculations are provided in the
+Supplementary Methods.
+Single-leg thermoelectric device fabrication and power genera-
+tion measurement
+For device fabrication, a thermoelectric leg with nominal dimensions
+comparable to those used for electrical transport measurements was
+sectioned along the b-axis from the as-grown SnS single crystal. The
+surface of the SnS leg and the copper electrodes were polished and
+metallized with a Ni(P) layer via electroless plating to serve as a dif-
+fusion barrier. The metallized components were subsequently joined
+using a Sn-3Ag-0.5Cu (SAC305) solder paste under constant pressure
+to achieve a robust, void-free interface. Copper wires were soldered
+onto the copper electrodes for the measurements of the current and
+voltage. The power generation performance of the fabricated single-
+leg device was characterized using a Mini-PEM system (Advance Riko).
+The device was evaluated at several temperature differences (ΔT)w h i l e
+maintaining the cold-side temperature ( Tc) approximately at 295 K.
+The current-voltage (I–V) characteristics were measured by varying an
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 10\n\n===PAGE 11===\nexternal load resistor ( RL), as shown in supplementary Fig. 36. The
+output power (P) was calculated as P = IV. The output heat ﬂow at the
+cold side (Qc) was measured by using aﬂow calorimeter. Theoretically,
+Qc is described by the sum of heat conduction (KΔT), Peltier heat (STcI),
+and Joule heat(0.5I2R), where R is the internal resistance of the leg. The
+heat source at the hot side (Qh) was then determined from the energy
+balance equation:
+Qh = P + Qc ð8Þ
+Finally, the conversion ef ﬁciency ( η) was calculated using the
+standard deﬁnition as:
+η = P Qh ð9Þ
+The output power density was calculated asPd = Pmax/A, where the
+maximum output power (Pmax) was obtained from the maximum ΔT,
+and A is the cross-sectional area of the single-leg device. The fabricated
+single-leg sample had approximate dimensions of 8 × 3 × 2 mm3.
+Data availability
+The data supporting theﬁndings of this study are provided within the
+Supplementary Information and Source Data ﬁle. Additional data are
+available from the corresponding author upon request. Source Data
+ﬁle has been deposited in Figshare under accession code https://doi.
+org/10.6084/m9.ﬁgshare.3319159856.
+References
+1. Bell, L. E. Cooling, heating, generating power, and recovering
+waste heat with thermoelectric systems.Science 321,1 4 5 7–1461
+(2008).
+2. Mao, J., Chen, G. & Ren, Z. Thermoelectric cooling materials. Nat.
+Mater. 20,4 5 4–461 (2021).
+3. Vining, C. B. An inconvenient truth about thermoelectrics.Nat.
+Mater. 8,8 3–85 (2009).
+4. Yan, Q. & Kanatzidis, M. G. High-performance thermoelectrics
+and challenges for practical devices. Nat. Mater. 21,5 0 3–513
+(2022).
+5. Biswas, K. et al. High-performance bulk thermoelectrics with
+all-scale hierarchical architectures. Nature 489,4 1 4–418
+(2012).
+6. Snyder, G. J. & Toberer, E. S. Complex thermoelectric materials.
+Nat. Mater. 7,1 0 5–114 (2008).
+7. Sootsman, J. R., Chung, D. Y. & Kanatzidis, M. G. New and old
+concepts in thermoelectric materials.Angew. Chem. Int. Ed. 48,
+8616–8639 (2009).
+8. Zhang, C. Thermoelectric materials: Telluride free. Nat. Energy 1,
+16182 (2016).
+9 . B a n o ,S . ,C h e t t y ,R . ,B a b u ,J .&M o r i ,T .M g₃(Sb,Bi)₂-based materials
+and devices rivaling bismuth telluride for thermoelectric power
+generation and cooling.Device 2, 100408 (2024).
+10. Hinterleitner, B. et al. Thermoelectric performance of a metastable
+thin-ﬁlm Heusler alloy. Nature 576,8 5–90 (2019).
+11. Zhu, H. et al. Half-Heusler alloys as emerging high power
+density thermoelectric cooling materials. Nat. Commun. 14,
+3300 (2023).
+12. Roychowdhury, S. et al. Enhanced atomic ordering leads to high
+thermoelectric performance in AgSbTe₂. Science 371,7 2 2–727
+(2021).
+13. Gao, J. et al. Coherent Ag-rich nanoprecipitates/ β-Ag₂Se ﬂexible
+ﬁlm with unprecedented thermoelectric performance by liquid-like
+sintering.Nat. Commun. 16, 6010 (2025).
+14. Chen, W. et al. Nanobinders advance screen-printed ﬂexible ther-
+moelectrics.Science 386,1 2 6 5–1271 (2024).
+15. Ying, P. et al. Towards tellurium-free thermoelectric modules for
+power generation from low-grade heat.Nat. Commun. 12,
+1–6 (2021).
+16. Bu, Z. et al. A record thermoelectric ef ﬁciency in tellurium-free
+modules for low-grade waste heat recovery.Nat. Commun. 13,
+237 (2022).
+17. Zhao, L.-D. et al. Ultralow thermal conductivity and high ther-
+moelectric ﬁgure of merit in SnSe crystals. Nature 508,
+373–377 (2014).
+18. Qin, B. et al. Power generation and thermoelectric cooling enabled
+by momentum and energy multiband alignments.Science 373,
+556–561 (2021).
+19. Qin, B. et al. High thermoelectric efﬁciency realized in SnSe crystals
+via structural modulation.Nat. Commun. 14,1 3 6 6( 2 0 2 3 ) .
+20. Wu, H. et al. Sodium-doped tin sul ﬁde single crystal: a nontoxic
+earth-abundant material with high thermoelectric performance.
+Adv. Energy Mater. 8, 1800087 (2018).
+21. He, W. et al. Remarkable electron and phonon band structures
+lead to a high thermoelectric performance ZT > 1 in earth-
+abundant and eco-friendly SnS crystals. J. Mater. Chem. A 6,
+10048–10056 (2018).
+22. Zhou, B. et al. Thermoelectric properties of SnS with Na-doping.
+ACS Appl. Mater. Interfaces9,3 4 0 3 3–34041 (2017).
+2 3 . T a n ,Q .e ta l .T h e r m o e l e c t r i c swith earth-abundant elements: low
+thermal conductivity and high thermopower in doped SnS.J. Mater.
+Chem. A 2,1 7 3 0 2–17306 (2014).
+24. Fakhri, M. Y. et al. Enhanced low-temperature thermoelectric
+properties in textured polycrystalline SnS co-doped with Na and
+Ag. J. Alloy. Compd. 1018, 179124 (2025).
+25. Asfandiyar et al. Thermoelectric performance enhancement
+in SnS polycrystals owing to hole doping combined with
+textured microstructures. ACS Appl. Mater. Interfaces 16,
+38073–38082 (2024).
+26. Wu, H. et al. Realizing high thermoelectricity in polycrystalline tin
+sulﬁde via manipulating Fermi surface anisotropy and phonon dis-
+persion. Mater. Today Phys. 14, 100221 (2020).
+27. He, W. et al. High thermoelectric performance in low-cost
+SnS0.91Se0.09 crystals. Science 365,1 4 1 8–1424 (2019).
+28. Liu, S. et al. Quadruple-band synglisis enables high thermoelectric
+efﬁciency in earth-abundant tin sulﬁde crystals. Science 387,
+202–208 (2025).
+29. Caballero-Calero, O., Ares, J. R. & Martín-González, M. Envir-
+onmentally friendly thermoelectric materials: high performance
+from inorganic components with low toxicity and abundance in the
+Earth. Adv. Sustain. Syst. 5, 2100095 (2021).
+30. Xie, H. et al. Large thermal conductivity drops in the diamondoid
+lattice of CuFeS₂ by discordant atom doping.J. Am. Chem. Soc.141,
+18900–18909 (2019).
+31. Gurunathan, R., Hanus, R., Dylla, M., Katre, A. & Snyder, G. J. Ana-
+lytical models of phonon–point-defect scattering.Phys. Rev. Appl.
+13, 034011 (2020).
+32. Wu, P. et al. Strong anharmonicity in tin monosul ﬁde evidenced by
+local distortion, high-energy optical phonons, and anharmonic
+potential.P h y s .R e v .B103, 195204 (2021).
+33. Lanigan-Atkins, T. et al. Extended anharmonic collapse of
+phonon dispersions in SnS and SnSe. Nat. Commun. 11,
+4430 (2020).
+34. Yu, Y. et al. Doping by design: e nhanced thermoelectric perfor-
+mance of GeSe alloys through metavalent bonding.Adv. Mater.35,
+2300893 (2023).
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 11\n\n===PAGE 12===\n35. Bhui, A. et al. S –d coupling-induced dynamic off-centering of Cu
+drives high thermoelectric performance in TlCuS.J. Am. Chem.
+Soc. 147,3 7 5 8–3768 (2025).
+36. Zhang, D. et al. High thermoelectric performance in Cu ₂SnS₃ by
+control over phase-dependent mobility edge.Adv. Energy Mater.
+13, 2301406 (2023).
+37. Shi, H. et al. Crystal symmetry modiﬁcation enables high-ranged in-
+plane thermoelectric performance in n-type SnSe crystals.Nat.
+Commun. 16, 1788 (2025).
+38. Wang, S. et al. Enhanced lattice symmetry via Mn doping
+boosts electrical transport performance in rhombohedral
+GeSe thermoelectric materials. Nat. Commun. 16, 10377
+(2025).
+39. Jonson, M. & Mahan, G. D. Mott ’s formula for the thermopower
+and the Wiedemann –Franz law. P h y s .R e v .B21,4 2 2 3–4229
+(1980).
+40. Bhandari, C. M. & Rowe, D. M. Modern Thermoelectrics(Holt
+Saunders, 1983).
+4 1 . L i u ,X .e ta l .L o we l e c t r o ns c a t t e r i n gp o t e n t i a l si nh i g hp e r f o r m a n c e
+Mg₂Si₀.₄₅Sn₀.₅₅-based thermoelectric solid solutions with band con-
+vergence. Adv. Energy Mater. 3,1 2 3 8–1244 (2013).
+42. Tang, Y. et al. Convergence of multi-valley bands as the electronic
+origin of high thermoelectric performance in CoSb₃ skutterudites.
+Nat. Mater. 14, 1223–1228 (2015).
+43. Anjum, F., Bhattacharjee, D., Bhattacharya, A. & Maiti, T.
+Enhanced thermoelectric performance in earth-abundant Bi ₂S₃
+by band structure modi ﬁcation using CuCl doping. Small 21,
+2412711 (2025).
+44. Guilmeau, E., Bréard, Y. & Maignan, A. Transport and thermoelectric
+properties in copper-intercalated TiS₂ chalcogenide.Appl. Phys.
+Lett. 99, 052107 (2011).
+4 5 . L o n g ,S .O .J . ,P o w e l l ,A .V . ,V a q u e i r o ,P .&H u l l ,S .H i g ht h e r -
+moelectric performance of bornite through control of the
+Cu(II) content and vacancy concentration. Chem. Mater. 30,
+456–464 (2018).
+46. Deng, T. et al. A low-cost and eco-friendly Br-doped Cu ₇Sn₃S₁₀
+thermoelectric compound with zT around unity.J. Mater. Chem. A
+9,7 9 4 6–7954 (2021).
+4 7 . H e o ,J . ,L a u r i t a ,G . ,M u i r ,S . ,S u b r a m a n i a n ,M .A .&K e s z l e r ,D .A .
+Enhanced thermoelectric performance of synthetic tetrahedrites.
+Chem. Mater. 26,2 0 4 7–2051 (2014).
+48. He, Y. et al. High thermoelectric performance in non-toxic
+earth-abundant copper sul ﬁde. Adv. Mater. 26,3 9 7 4–3978
+(2014).
+49. Ibáñez, M. et al. High-perf ormance thermoelectric nano-
+composites from nanocrystal building blocks. Nat. Commun. 7,
+10766 (2016).
+50. Shuai, J. et al. Study on thermoelectric performance by Na doping
+in nanostructured Mg₁₋ₓNaₓAg₀.₉₇Sb₀.₉₉. Nano Energy 11, 640–646
+(2015).
+51. Rodríguez-Carvajal, J. Recen t advances in magnetic structure
+determination by neutron powder diffraction.Phys. B Condens.
+Matter 192,5 5–69 (1993).
+52. Roisnel, T. & Rodríguez-Carvajal, J. WinPLOTR: a Windows tool for
+powder diffraction pattern analysis.Mater. Sci. Forum 378–381,
+118–123 (2001).
+53. Ravel, B. & Newville, M. ATHENA, ARTEMIS, HEPHAESTUS: Data
+analysis for X-ray absorptionspectroscopy using IFEFFIT.J. Syn-
+chrotron Radiat.12,5 3 7–541 (2005).
+54. Momma, K. & Izumi, F. VESTA 3 for three-dimensional visualization
+of crystal, volumetric and morphology data.J. Appl. Crystallogr.44,
+1272–1276 (2011).
+55. Snyder, G. J. et al. Weighted mobility. Adv. Mater. 32,2 0 0 1 5 3 7
+(2020).
+56. Fakhri, M. Y. et al. Ef ﬁcient power generation near room tempera-
+ture in earth-abundant thermoelectric tin sulﬁde via lattice order-
+ing. Figshare. Dataset. https://doi.org/10.6084/m9.ﬁgshare.
+33191598 (2026).
+Acknowledgements
+The authors thank Dr. Yu-Chun Chuang for assistance with high-
+resolution XRD measurements at TPS 19 A, Dr. Wan-Zhen Hsieh and
+Dr. Ching-Yu Chiang for assistance with synchrotron XRF measurements
+at TPS 21 A, and Dr. Hao-Hsiang Jia for assistance with ARPES analysis at
+TPS 39 A at the National Synchrotron Radiation Research Center
+(NSRRC), Taiwan. The authors are also grateful to Dr. Min-Nan Ou and
+Dr. Kavirajan Sugumaran for providing Laue diffraction and crystal
+growth services at the Institute of Physics (IOP), Academia Sinica. In
+addition, the authors acknowledge Prof. Ching-Ming Wei for valuable
+discussions.
+Author contributions
+M.Y.F., A.G., and S.M.V. designed the experiments, analyzed the data,
+and wrote the manuscript. M.Y.F. and W.C.L. carried out material
+synthesis and basic characterization. D.L.N. and A.G. performed the
+density functional theory (DFT) calculations and simulations. C.P. and
+E.G. conducted XRD reﬁnement and XAS ﬁtting. C.Y.H., C.C.C., and
+C.M.C. performed the ARPES measurements and analysis. W.C.L.,
+H.H.M.J., S.S., K.H., and C.N.L. carried out single-leg device fabrication.
+B.C.C. and H.J.W. performed device conversion efﬁciency measure-
+ments. P.G. conducted PPMS measurements and data analysis. M.H.L.
+and M.W.C. performed TEM characterization. Z.L.Y. and Y.P.C. carried
+out STS measurements and analysis. R.S. provided single-crystal growth
+facilities. K.H.C. and L.C.C. provided resources and supervision. All
+authors discussed the results and commented on the manuscript.
+Funding
+This work was supported by Sustainability Science Research Program
+(SSRP) under Center for Sustainability Science of Academia Sinica
+(AS–SS–112–01), the Center of Atomic Initiative for New Materials (AI-
+Mat) of National Taiwan University (110 L9008), and the National Science
+and Technology Council (NSTC) of Taiwan
+(114–2639–M–002–003–ASP).
+Competing interests
+The authors declare no competing interests.
+Additional information
+Supplementary informationThe online version contains
+supplementary material available at
+https://doi.org/10.1038/s41467-026-77691-x.
+Correspondenceand requests for materials should be addressed to
+Abhishek Ghosh, Li-Chyong Chen or Kuei-Hsien Chen.
+Peer review informationNature Communicationsthanks Byungki Ryu
+and the other anonymous reviewer(s) for their contribution to the peer
+review of this work. A peer review ﬁle is available.
+Reprints and permissions informationis available at
+http://www.nature.com/reprints
+Publisher’s note Springer Nature remains neutral with regard to jur-
+isdictional claims in published maps and institutional afﬁliations.
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 12\n\n===PAGE 13===\nOpen Access This article is licensed under a Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License,
+which permits any non-commercial use, sharing, distribution and
+reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the
+Creative Commons licence, and indicate if you modiﬁed the licensed
+material. You do not have permission under this licence to share adapted
+material derived from this article or parts of it. The images or other third
+party material in this article are included in the article’s Creative
+Commons licence, unless indicatedotherwise in a credit line to the
+material. If material is not included in the article’s Creative Commons
+licence and your intended use is not permitted by statutory regulation or
+exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this licence, visit http://
+creativecommons.org/licenses/by-nc-nd/4.0/.
+© The Author(s) 2026
+1Institute of Atomic and Molecular Sciences, Academia Sinica, Taipei, Taiwan.2International Graduate Program of Molecular Science and Technology (NTU-
+MST), National Taiwan University, Taipei, Taiwan.3Taiwan International Graduate Program (TIGP), Academia Sinica, Taipei, Taiwan.4Center for Condensed
+Matter Sciences, National Taiwan University, Taipei, Taiwan.5College of Semiconductor Research, National Tsing Hua University, Hsinchu, Taiwan.6Simu-
+lation in Materials Science Research Group, Science and Technology Advanced Institute, Van Lang University, Ho Chi Minh, Vietnam.7Institute of Physics,
+Academia Sinica, Taipei, Taiwan.8National Synchrotron Radiation Research Center, Hsinchu, Taiwan.9Department of Materials Science and Engineering,
+National Tsing Hua University, Hsinchu, Taiwan.10Department of Materials Science and Engineering, National Taiwan University, Taipei, Taiwan.11Department
+of Physics, National Taiwan University, Taipei, Taiwan.12Center of Atomic Initiative for New Materials, Taipei, Taiwan.13Department of Applied Physics,
+Graduate School of Engineering, Tohoku University, Sendai, Japan.14CRISMAT, CNRS, Normandie Univ, ENSICAEN; Unicaen, Caen, France.
+e-mail: ghoshabhishekiitd@gmail.com; chenlc@ntu.edu.tw; chenkh@pub.iams.sinica.edu.tw
+Article https://doi.org/10.1038/s41467-026-77691-x
+Nature Communications|        (2026) 17:10803 13

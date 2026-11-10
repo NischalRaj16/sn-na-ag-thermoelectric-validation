@@ -1,0 +1,3 @@
+file,elements,counts,natoms,cell_volume_A3,n_Ag,n_Na,n_S,n_Sn
+POSCAR.Sn69Na1Ag2S72,Ag Na S Sn,2 1 72 69,144,3370.007732101248,2,1,72,69
+POSCAR.Sn70Na1Ag1S72,Ag Na S Sn,1 1 72 70,144,3370.007732101248,1,1,72,70

@@ -1,0 +1,2219 @@
+[
+  {
+    "file": "Figure 1.xlsx",
+    "sheets": [
+      {
+        "sheet": "Figures 1b",
+        "shape": [
+          6,
+          3
+        ],
+        "head": [
+          [
+            "Sample (x)",
+            "\u03bcW / \u03ba_l",
+            "nH (cm-3)"
+          ],
+          [
+            0,
+            198.68,
+            22243000000000000000
+          ],
+          [
+            0.01,
+            329.57,
+            24843750000000000000
+          ]
+        ]
+      },
+      {
+        "sheet": "Figure 1c",
+        "shape": [
+          9,
+          2
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "zT"
+          ],
+          [
+            null,
+            "x = 0.03"
+          ],
+          [
+            300,
+            "1.058 \u00b1 0.107"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Figure 2.xlsx",
+    "sheets": [
+      {
+        "sheet": "Figures 2a",
+        "shape": [
+          9,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "S (\u00b5V K-1)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            223.57,
+            232,
+            239.58,
+            243.8,
+            246.25
+          ]
+        ]
+      },
+      {
+        "sheet": "Figures 2b",
+        "shape": [
+          20,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "\u03c3 (S cm-1)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            738.78,
+            1070.41,
+            1379.07,
+            1697.47,
+            1235.29
+          ]
+        ]
+      },
+      {
+        "sheet": "Figure 2c",
+        "shape": [
+          9,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "PF (\u00b5W cm-1 K-2)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            "36.93 \u00b1 3.28",
+            "57.61 \u00b1 3.68",
+            "79.16 \u00b1 4.83",
+            "100.89 \u00b1 4.14",
+            "74.91 \u00b1 5.03"
+          ]
+        ]
+      },
+      {
+        "sheet": "Figure 2d",
+        "shape": [
+          31,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "\u03ba_total (W m-1 K-1)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            "2.658 \u00b1 0.121",
+            "2.766 \u00b1 0.137",
+            "2.710 \u00b1 0.142",
+            "2.862 \u00b1 0.141",
+            "2.698 \u00b1 0.137"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Figure 3.xlsx",
+    "sheets": [
+      {
+        "sheet": "Figures 3a",
+        "shape": [
+          6,
+          2
+        ],
+        "head": [
+          [
+            "Sample (x)",
+            "\u03b8(o)"
+          ],
+          [
+            0,
+            9.9033
+          ],
+          [
+            0.01,
+            9.6977
+          ]
+        ]
+      },
+      {
+        "sheet": "Figure 3b",
+        "shape": [
+          4002,
+          4
+        ],
+        "head": [
+          [
+            "x = 0",
+            null,
+            "x = 0.03",
+            null
+          ],
+          [
+            "Binding Energy (eV)",
+            "Intensity",
+            "Binding Energy (eV)",
+            "Intensity"
+          ],
+          [
+            29013.699,
+            0.00655,
+            29024.251,
+            0.00554
+          ]
+        ]
+      },
+      {
+        "sheet": "Figure 3c",
+        "shape": [
+          328,
+          13
+        ],
+        "head": [
+          [
+            "Exp.",
+            "r (\u212b)",
+            "FT",
+            null,
+            "Im",
+            null,
+            null,
+            "Fitting",
+            "r (\u212b)",
+            "FT",
+            null,
+            "Im",
+            null
+          ],
+          [
+            null,
+            null,
+            "Sn_K ",
+            "Ag_K",
+            "Sn_K",
+            "Ag_K",
+            null,
+            null,
+            null,
+            "Sn_K ",
+            "Ag_K",
+            "Sn_K",
+            "Ag_K"
+          ],
+          [
+            null,
+            0,
+            0.03977,
+            0.00587,
+            0,
+            0,
+            null,
+            null,
+            0,
+            0.02119,
+            1.78183e-05,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "sheet": "Figure 3d",
+        "shape": [
+          1642,
+          39
+        ],
+        "head": [
+          [
+            "x = 0",
+            "Raman Shift (cm-1)",
+            "Intensity",
+            null,
+            null,
+            null,
+            null,
+            null,
+            "x = 0.01",
+            "Raman Shift (cm-1)",
+            "Intensity",
+            null,
+            null,
+            null,
+            null,
+            null,
+            "x = 0.02",
+            "Raman Shift (cm-1)",
+            "Intensity",
+            null,
+            null,
+            null,
+            null,
+            null,
+            "x = 0.03",
+            "Raman Shift (cm-1)",
+            "Intensity",
+            null,
+            null,
+            null,
+            null,
+            null,
+            "x = 0.04",
+            "Raman Shift (cm-1)",
+            "Intensity",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Experiment",
+            "Fitting 1",
+            "Fitting 2",
+            "Fitting 3",
+            "Fitting 4",
+            null,
+            null,
+            null,
+            "Experiment",
+            "Fitting 1",
+            "Fitting 2",
+            "Fitting 3",
+            "Fitting 4",
+            null,
+            null,
+            null,
+            "Experiment",
+            "Fitting 1",
+            "Fitting 2",
+            "Fitting 3",
+            "Fitting 4",
+            null,
+            null,
+            null,
+            "Experiment",
+            "Fitting 1",
+            "Fitting 2",
+            "Fitting 3",
+            "Fitting 4",
+            null,
+            null,
+            null,
+            "Experiment",
+            "Fitting 1",
+            "Fitting 2",
+            "Fitting 3",
+            "Fitting 4"
+          ],
+          [
+            null,
+            80,
+            33.10892,
+            32.33974,
+            9.89391,
+            7.02127,
+            3.8019,
+            null,
+            null,
+            80,
+            25.39082,
+            27.03802,
+            4.42474,
+            0.41383,
+            -3.04135,
+            null,
+            null,
+            80,
+            34.95634,
+            37.00182,
+            7.09619,
+            3.98849,
+            0.12284,
+            null,
+            null,
+            80,
+            36.33284,
+            33.06707,
+            8.14996,
+            3.94971,
+            0.49439,
+            null,
+            null,
+            80,
+            49.93086,
+            50.82645,
+            23.81236,
+            18.02056,
+            14.27905
+          ]
+        ]
+      },
+      {
+        "sheet": "Figure 3e",
+        "shape": [
+          6,
+          5
+        ],
+        "head": [
+          [
+            "Sample (x)",
+            "Ag1",
+            "Ag2",
+            "B3g",
+            "Ag3"
+          ],
+          [
+            0,
+            "95.40 \u00b1 0.01",
+            "192.15 \u00b1 0.02",
+            "163.22 \u00b1 0.06",
+            "219.53 \u00b1 0.12"
+          ],
+          [
+            0.01,
+            "94.86 \u00b1 0.02",
+            "191.94 \u00b1 0.02",
+            "163.30 \u00b1 0.06",
+            "218.93 \u00b1 0.13"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Figure 5.xlsx",
+    "sheets": [
+      {
+        "sheet": "Figure 5b",
+        "shape": [
+          102,
+          17
+        ],
+        "head": [
+          [
+            "x = 0",
+            "VB1",
+            null,
+            "VB3",
+            null,
+            null,
+            "x = 0.01",
+            "VB1",
+            null,
+            "VB3",
+            null,
+            null,
+            "x = 0.03",
+            "VB1",
+            null,
+            "VB3",
+            null
+          ],
+          [
+            null,
+            "k (\u00c5-1)",
+            "E-EF (eV)",
+            "k (\u00c5-1)",
+            "E-EF (eV)",
+            null,
+            null,
+            "k (\u00c5-1)",
+            "E-EF (eV)",
+            "k (\u00c5-1)",
+            "E-EF (eV)",
+            null,
+            null,
+            "k (\u00c5-1)",
+            "E-EF (eV)",
+            "k (\u00c5-1)",
+            "E-EF (eV)"
+          ],
+          [
+            null,
+            0.65,
+            -0.416870588235294,
+            0.45,
+            -1.080872,
+            null,
+            null,
+            0.73,
+            -0.233408108108108,
+            0.45,
+            -1.080872,
+            null,
+            null,
+            0.65,
+            -0.202446666666667,
+            0.35,
+            -0.823235593220339
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Figure 6.xlsx",
+    "sheets": [
+      {
+        "sheet": "Figure 6c",
+        "shape": [
+          10,
+          4
+        ],
+        "head": [
+          [
+            "\u0394\u03b8",
+            "VB(1-2)",
+            "VB(1-3)",
+            "VB(1-4)"
+          ],
+          [
+            0,
+            64.825,
+            107.798,
+            98.371
+          ],
+          [
+            0.25,
+            66.484,
+            110.718,
+            100.272
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Figure 7.xlsx",
+    "sheets": [
+      {
+        "sheet": "Figure 7a",
+        "shape": [
+          121,
+          10
+        ],
+        "head": [
+          [
+            "4-band",
+            "nH (cm-3)",
+            "S (\u00b5V K-1)",
+            "3-band",
+            "nH (cm-3)",
+            "S (\u00b5V K-1)",
+            null,
+            "Sample (x)",
+            "nH (cm-3)",
+            "S (\u00b5V K-1)"
+          ],
+          [
+            null,
+            1000000000000000000,
+            469.63701,
+            null,
+            1000000000000000000,
+            524.44406,
+            null,
+            0,
+            22243000000000000000,
+            223.57
+          ],
+          [
+            null,
+            1049560000000000000,
+            465.52639,
+            null,
+            1049560000000000000,
+            520.29607,
+            null,
+            0.01,
+            24843800000000000000,
+            232
+          ]
+        ]
+      },
+      {
+        "sheet": "Figure 7b",
+        "shape": [
+          121,
+          10
+        ],
+        "head": [
+          [
+            "4-band",
+            "nH (cm-3)",
+            "\u03bcH (cm2 V-1 s-1)",
+            "3-band",
+            "nH (cm-3)",
+            "\u03bcH (cm2 V-1 s-1)",
+            null,
+            "Sample (x)",
+            "nH (cm-3)",
+            "\u03bcH (cm2 V-1 s-1)"
+          ],
+          [
+            null,
+            1000000000000000000,
+            232.88584,
+            null,
+            1000000000000000000,
+            296.76633,
+            null,
+            0,
+            22243000000000000000,
+            207.30576
+          ],
+          [
+            null,
+            1049560000000000000,
+            232.79142,
+            null,
+            1049560000000000000,
+            296.78053,
+            null,
+            0.01,
+            24843800000000000000,
+            268.9197
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Figure 8.xlsx",
+    "sheets": [
+      {
+        "sheet": "Figure 8a",
+        "shape": [
+          20,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "zT",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            "0.417 \u00b1 0.056",
+            "0.625 \u00b1 0.068",
+            "0.876 \u00b1 0.876",
+            "1.058 \u00b1 0.107",
+            "0.833 \u00b1 0.087"
+          ]
+        ]
+      },
+      {
+        "sheet": "Figures 8c",
+        "shape": [
+          13,
+          14
+        ],
+        "head": [
+          [
+            "\u0394T= 25 K",
+            null,
+            "\u0394T= 73 K",
+            null,
+            "\u0394T= 121 K",
+            null,
+            "\u0394T= 170 K",
+            null,
+            "\u0394T= 194 K",
+            null,
+            "\u0394T= 219 K",
+            null,
+            "\u0394T= 243 K",
+            null
+          ],
+          [
+            "I(A)",
+            "P (W)",
+            "I(A)",
+            "P (W)",
+            "I(A)",
+            "P (W)",
+            "I(A)",
+            "P (W)",
+            "I(A)",
+            "P (W)",
+            "I(A)",
+            "P (W)",
+            "I(A)",
+            "P (W)"
+          ],
+          [
+            0.00112,
+            5.69448e-06,
+            0.00108,
+            1.67865e-05,
+            0.00106,
+            2.84406e-05,
+            0.0011,
+            4.29105e-05,
+            0.00112,
+            5.08853e-05,
+            0.00115,
+            5.99535e-05,
+            0.00118,
+            6.93813e-05
+          ]
+        ]
+      },
+      {
+        "sheet": "Figures 8d",
+        "shape": [
+          13,
+          14
+        ],
+        "head": [
+          [
+            "\u0394T= 25 K",
+            null,
+            "\u0394T= 73 K",
+            null,
+            "\u0394T= 121 K",
+            null,
+            "\u0394T= 170 K",
+            null,
+            "\u0394T= 194 K",
+            null,
+            "\u0394T= 219 K",
+            null,
+            "\u0394T= 243 K",
+            null
+          ],
+          [
+            "I(A)",
+            "\u03b7(%)",
+            "I(A)",
+            "\u03b7(%)",
+            "I(A)",
+            "\u03b7(%)",
+            "I(A)",
+            "\u03b7(%)",
+            "I(A)",
+            "\u03b7(%)",
+            "I(A)",
+            "\u03b7(%)",
+            "I(A)",
+            "\u03b7(%)"
+          ],
+          [
+            0.00112,
+            0.00771873,
+            0.00108,
+            0.008492699999999999,
+            0.00106,
+            0.009269830000000001,
+            0.0011,
+            0.0110553,
+            0.00112,
+            0.0116165,
+            0.00115,
+            0.0128655,
+            0.00118,
+            0.0139421
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 10.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig.10",
+        "shape": [
+          15513,
+          19
+        ],
+        "head": [
+          [
+            "x = 0",
+            "2\u03b8",
+            "Intensity",
+            null,
+            "x = 0.01",
+            "2\u03b8",
+            "Intensity",
+            null,
+            "x = 0.02",
+            "2\u03b8",
+            "Intensity",
+            null,
+            "x = 0.03",
+            "2\u03b8",
+            "Intensity",
+            null,
+            "x = 0.04",
+            "2\u03b8",
+            "Intensity"
+          ],
+          [
+            null,
+            2.28896,
+            255.56768,
+            null,
+            null,
+            2.28896,
+            353.10214,
+            null,
+            null,
+            2.28896,
+            236.85395,
+            null,
+            null,
+            2.28896,
+            550.2663,
+            null,
+            null,
+            2.28896,
+            813.71536
+          ],
+          [
+            null,
+            2.29642,
+            293.22404,
+            null,
+            null,
+            2.29642,
+            341.62557,
+            null,
+            null,
+            2.29642,
+            264.51489,
+            null,
+            null,
+            2.29642,
+            590.24777,
+            null,
+            null,
+            2.29642,
+            863.20387
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 11.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 11",
+        "shape": [
+          327,
+          3
+        ],
+        "head": [
+          [
+            "x = 0",
+            "r (\u212b)",
+            "|\u03c7(R)| (\u212b-3)"
+          ],
+          [
+            "Sn K-edge",
+            0,
+            0.02906
+          ],
+          [
+            null,
+            0.03068,
+            0.02847
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 12.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 12",
+        "shape": [
+          327,
+          3
+        ],
+        "head": [
+          [
+            "x = 0.03",
+            "r (\u212b)",
+            "|\u03c7(R)| (\u212b-3)"
+          ],
+          [
+            "Sn K-edge",
+            0,
+            0.03977
+          ],
+          [
+            null,
+            0.03068,
+            0.03869
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 13.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 11",
+        "shape": [
+          327,
+          3
+        ],
+        "head": [
+          [
+            "x = 0",
+            "r (\u212b)",
+            "|\u03c7(R)| (\u212b-3)"
+          ],
+          [
+            "Sn K-edge",
+            0,
+            0.02906
+          ],
+          [
+            null,
+            0.03068,
+            0.02847
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 12",
+        "shape": [
+          327,
+          3
+        ],
+        "head": [
+          [
+            "x = 0.03",
+            "r (\u212b)",
+            "|\u03c7(R)| (\u212b-3)"
+          ],
+          [
+            "Sn K-edge",
+            0,
+            0.03977
+          ],
+          [
+            null,
+            0.03068,
+            0.03869
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 13",
+        "shape": [
+          327,
+          3
+        ],
+        "head": [
+          [
+            "x = 0.03",
+            "r (\u212b)",
+            "|\u03c7(R)| (\u212b-3)"
+          ],
+          [
+            "Ag K-edge",
+            0,
+            0.00587
+          ],
+          [
+            null,
+            0.03068,
+            0.00966
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 14.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 14a",
+        "shape": [
+          172,
+          15
+        ],
+        "head": [
+          [
+            "Experiment",
+            "E - EF (eV)",
+            "Intensity (a. u.)",
+            null,
+            "Fit - Cumulative",
+            "E - EF (eV)",
+            "Intensity (a. u.)",
+            null,
+            "Fit - VB1",
+            "E - EF (eV)",
+            "Intensity (a. u.)",
+            null,
+            "Fit - VB3",
+            "E - EF (eV)",
+            "Intensity (a. u.)"
+          ],
+          [
+            null,
+            -0.501,
+            313.754,
+            null,
+            null,
+            -0.5,
+            97.589,
+            null,
+            null,
+            -0.5,
+            110.441,
+            null,
+            null,
+            -0.5,
+            19.722
+          ],
+          [
+            null,
+            -0.49,
+            286.588,
+            null,
+            null,
+            -0.495,
+            108.984,
+            null,
+            null,
+            -0.495,
+            111.642,
+            null,
+            null,
+            -0.495,
+            20.629
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 15.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 15",
+        "shape": [
+          201,
+          11
+        ],
+        "head": [
+          [
+            "1.3m0",
+            "nH (cm-3)",
+            "S (\u00b5V K-1)",
+            null,
+            "1.97m0",
+            "nH (cm-3)",
+            "S (\u00b5V K-1)",
+            null,
+            "Sample (x)",
+            "nH (cm-3)",
+            "S (\u00b5V K-1)"
+          ],
+          [
+            null,
+            1000000000000000000,
+            484.00722,
+            null,
+            null,
+            1000000000000000000,
+            538.13787,
+            null,
+            0,
+            22243000000000000000,
+            223.57
+          ],
+          [
+            null,
+            1029350000000000000,
+            481.52443,
+            null,
+            null,
+            1029350000000000000,
+            535.65045,
+            null,
+            0.01,
+            24843800000000000000,
+            232
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 2.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 2",
+        "shape": [
+          3955,
+          19
+        ],
+        "head": [
+          [
+            "x = 0",
+            "2\u03b8",
+            "Intensity",
+            null,
+            "x = 0.01",
+            "2\u03b8",
+            "Intensity",
+            null,
+            "x = 0.02",
+            "2\u03b8",
+            "Intensity",
+            null,
+            "x = 0.03",
+            "2\u03b8",
+            "Intensity",
+            null,
+            "x = 0.04",
+            "2\u03b8",
+            "Intensity"
+          ],
+          [
+            null,
+            10.0003,
+            0.000183451,
+            null,
+            null,
+            20.0003,
+            0.00019625,
+            null,
+            null,
+            10.0003,
+            0.000171495,
+            null,
+            null,
+            20.0003,
+            0.000171487,
+            null,
+            null,
+            20.0003,
+            0.000197997
+          ],
+          [
+            null,
+            10.0205,
+            0.000179151,
+            null,
+            null,
+            20.0205,
+            0.000211391,
+            null,
+            null,
+            10.0205,
+            0.00014847,
+            null,
+            null,
+            20.0205,
+            0.000181936,
+            null,
+            null,
+            20.0205,
+            0.000201984
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 20.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 20",
+        "shape": [
+          42,
+          19
+        ],
+        "head": [
+          [
+            "x = 0",
+            "B (T)",
+            "\u03c1 (\u03bc\u03a9 m)",
+            null,
+            "x = 0.01",
+            "B (T)",
+            "\u03c1 (\u03bc\u03a9 m)",
+            null,
+            "x = 0.02",
+            "B (T)",
+            "\u03c1 (\u03bc\u03a9 m)",
+            null,
+            "x = 0.03",
+            "B (T)",
+            "\u03c1 (\u03bc\u03a9 m)",
+            null,
+            "x = 0.04",
+            "B (T)",
+            "\u03c1 (\u03bc\u03a9 m)"
+          ],
+          [
+            null,
+            2,
+            5.55598e-07,
+            null,
+            null,
+            2,
+            5.02861e-07,
+            null,
+            null,
+            2,
+            4.31928e-07,
+            null,
+            null,
+            2,
+            3.84301e-07,
+            null,
+            null,
+            2,
+            4.50291e-07
+          ],
+          [
+            null,
+            1.90005,
+            5.27551e-07,
+            null,
+            null,
+            1.90005,
+            4.77751e-07,
+            null,
+            null,
+            1.90005,
+            4.10182e-07,
+            null,
+            null,
+            1.90005,
+            3.65068e-07,
+            null,
+            null,
+            1.90005,
+            4.2758e-07
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 21.xlsx",
+    "sheets": [
+      {
+        "sheet": "README",
+        "shape": [
+          20,
+          2
+        ],
+        "head": [
+          [
+            "AMSET data for p = 3 \u00d7 10^19 and 5 \u00d7 10^19 cm^-3",
+            null
+          ],
+          [
+            null,
+            null
+          ],
+          [
+            "Source JSON files used",
+            null
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 21",
+        "shape": [
+          69,
+          6
+        ],
+        "head": [
+          [
+            "Seebeck coefficient",
+            "Syy (\u00b5V K\u207b\u00b9)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Temperature (K)",
+            "Ag0",
+            "Ag1",
+            "Ag2",
+            "Ag3",
+            "Ag4"
+          ],
+          [
+            300,
+            275.75879935710213,
+            243.07995316372066,
+            224.93903370322258,
+            228.61911481140615,
+            151.41909777962462
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 22.xlsx",
+    "sheets": [
+      {
+        "sheet": "README",
+        "shape": [
+          20,
+          2
+        ],
+        "head": [
+          [
+            "AMSET data for p = 3 \u00d7 10^19 and 5 \u00d7 10^19 cm^-3",
+            null
+          ],
+          [
+            null,
+            null
+          ],
+          [
+            "Source JSON files used",
+            null
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 22",
+        "shape": [
+          69,
+          6
+        ],
+        "head": [
+          [
+            "Seebeck coefficient",
+            "Syy (\u00b5V K\u207b\u00b9)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Temperature (K)",
+            "Ag0",
+            "Ag1",
+            "Ag2",
+            "Ag3",
+            "Ag4"
+          ],
+          [
+            300,
+            237.68191948853178,
+            211.08910709114423,
+            194.87641111785163,
+            198.62685393689767,
+            133.78456337237844
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 28.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 28",
+        "shape": [
+          121,
+          10
+        ],
+        "head": [
+          [
+            "4-band",
+            "nH (cm-3)",
+            "zT",
+            "3-band",
+            "nH (cm-3)",
+            "zT",
+            null,
+            "Sample (x)",
+            "nH (cm-3)",
+            "zT"
+          ],
+          [
+            null,
+            1000000000000000000,
+            0.13559,
+            null,
+            1000000000000000000,
+            0.2148,
+            null,
+            0,
+            22243000000000000000,
+            0.417
+          ],
+          [
+            null,
+            1049560000000000000,
+            0.1397,
+            null,
+            1049560000000000000,
+            0.22174,
+            null,
+            0.01,
+            24843800000000000000,
+            0.625
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 29.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 29a",
+        "shape": [
+          29,
+          9
+        ],
+        "head": [
+          [
+            "Supplementary Fig. 29a",
+            "Temperature (K)",
+            "S (\u00b5V K-1)",
+            null,
+            null,
+            "Supplementary Fig. 29d",
+            "Temperature (K)",
+            "\u03ba_total (W m-1 K-1)",
+            null
+          ],
+          [
+            null,
+            null,
+            "b-axis",
+            "c-axis",
+            null,
+            null,
+            null,
+            "b-axis",
+            "c-axis"
+          ],
+          [
+            null,
+            300,
+            243.8,
+            235.86692,
+            null,
+            null,
+            300,
+            2.862,
+            1.721
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 30.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 30",
+        "shape": [
+          29,
+          13
+        ],
+        "head": [
+          [
+            "Supplementary Fig. 30a",
+            "Temperature (K)",
+            "S (\u00b5V K-1)",
+            null,
+            null,
+            null,
+            null,
+            "Supplementary Fig. 30d",
+            "Temperature (K)",
+            "\u03ba_total (W m-1 K-1)",
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Sample 1",
+            "Sample 2",
+            "Sample 3",
+            "Sample 4",
+            null,
+            null,
+            null,
+            "Sample 1",
+            "Sample 2",
+            "Sample 3",
+            "Sample 4"
+          ],
+          [
+            null,
+            300,
+            243.8,
+            247.53671,
+            251.0718,
+            250.05214,
+            null,
+            null,
+            300,
+            2.862,
+            2.86141,
+            2.79805,
+            2.71739
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 31.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 30",
+        "shape": [
+          39,
+          9
+        ],
+        "head": [
+          [
+            "Supplementary Fig. 31a",
+            "Temperature (K) - Heating",
+            "S (\u00b5V K-1) - Heating",
+            null,
+            null,
+            "Temperature (K) - Cooling",
+            "S (\u00b5V K-1) - Cooling",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "# 1",
+            "# 2",
+            "# 3",
+            null,
+            "# 1",
+            "# 2",
+            "# 3"
+          ],
+          [
+            null,
+            300,
+            242.47043,
+            244.67292,
+            244.10391,
+            573,
+            331.29337,
+            333.95373,
+            335.43144
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 32.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 32a",
+        "shape": [
+          580,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "Weight (%)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            296.67,
+            99.99605,
+            99.99271,
+            99.98967,
+            100.00001,
+            99.98525
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 32b",
+        "shape": [
+          611,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "Heat Flow (mW)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            296.35,
+            -0.01752,
+            -0.02239,
+            -0.02696,
+            -0.02697,
+            -0.02189
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 33.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 33a",
+        "shape": [
+          9,
+          4
+        ],
+        "head": [
+          [
+            "Expertiment",
+            null,
+            "Theoretical",
+            null
+          ],
+          [
+            "\u0394T (K)",
+            "\u03b7 (%)",
+            "\u0394T (K)",
+            "\u03b7 (%)"
+          ],
+          [
+            25.09462,
+            "0.27633 \u00b1 0.0070",
+            23,
+            0.85609
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 33b",
+        "shape": [
+          8,
+          3
+        ],
+        "head": [
+          [
+            "\u0394T (K)",
+            "PD-Exp (W cm-2)",
+            "PD-Ideal (W cm-2)"
+          ],
+          [
+            25.09462,
+            0.00357,
+            0.02
+          ],
+          [
+            72.81362,
+            0.02958,
+            0.15
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 34.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 34",
+        "shape": [
+          8,
+          3
+        ],
+        "head": [
+          [
+            "\u0394T (K)",
+            "Effective PF (W cm-2 K-1)",
+            "Device ZT"
+          ],
+          [
+            25.09462,
+            17.79,
+            0.15
+          ],
+          [
+            72.81362,
+            17.49,
+            0.16
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 35.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 35a",
+        "shape": [
+          9,
+          4
+        ],
+        "head": [
+          [
+            "\u0394T (K)",
+            "Resistance, R (m\u03a9)",
+            null,
+            null
+          ],
+          [
+            null,
+            "Internal",
+            "Material",
+            "Parasitic"
+          ],
+          [
+            25.09462,
+            0.03058,
+            0.00895,
+            0.02163
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 35b",
+        "shape": [
+          8,
+          2
+        ],
+        "head": [
+          [
+            "\u0394T (K)",
+            "Rc / Rint (%)"
+          ],
+          [
+            25.09462,
+            70.7325
+          ],
+          [
+            72.81362,
+            70.66116
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 36.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 36a",
+        "shape": [
+          13,
+          14
+        ],
+        "head": [
+          [
+            "\u0394T= 25 K",
+            null,
+            "\u0394T= 73 K",
+            null,
+            "\u0394T= 121 K",
+            null,
+            "\u0394T= 170 K",
+            null,
+            "\u0394T= 194 K",
+            null,
+            "\u0394T= 219 K",
+            null,
+            "\u0394T= 243 K",
+            null
+          ],
+          [
+            "I(A)",
+            "V(V)",
+            "I(A)",
+            "V(V)",
+            "I(A)",
+            "V(V)",
+            "I(A)",
+            "V(V)",
+            "I(A)",
+            "V(V)",
+            "I(A)",
+            "V(V)",
+            "I(A)",
+            "V(V)"
+          ],
+          [
+            0.00112,
+            0.00508,
+            0.00108,
+            0.01548,
+            0.00106,
+            0.02675,
+            0.0011,
+            0.03899,
+            0.00112,
+            0.04541,
+            0.00115,
+            0.05197,
+            0.00118,
+            0.05871
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 36b",
+        "shape": [
+          13,
+          14
+        ],
+        "head": [
+          [
+            "\u0394T= 25 K",
+            null,
+            "\u0394T= 73 K",
+            null,
+            "\u0394T= 121 K",
+            null,
+            "\u0394T= 170 K",
+            null,
+            "\u0394T= 194 K",
+            null,
+            "\u0394T= 219 K",
+            null,
+            "\u0394T= 243 K",
+            null
+          ],
+          [
+            "I(A)",
+            "Q(W)",
+            "I(A)",
+            "Q(W)",
+            "I(A)",
+            "Q(W)",
+            "I(A)",
+            "Q(W)",
+            "I(A)",
+            "Q(W)",
+            "I(A)",
+            "Q(W)",
+            "I(A)",
+            "Q(W)"
+          ],
+          [
+            0.00108,
+            0.07377,
+            0.19764,
+            0.00106,
+            0.30678,
+            0.0011,
+            0.3881,
+            0.00112,
+            0.43799,
+            0.00115,
+            0.46594,
+            0.00118,
+            0.49757,
+            0.0139421
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 6.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 6",
+        "shape": [
+          15513,
+          19
+        ],
+        "head": [
+          [
+            "x = 0",
+            "2\u03b8",
+            "Log Intensity",
+            null,
+            "x = 0.01",
+            "2\u03b8",
+            "Log Intensity",
+            null,
+            "x = 0.02",
+            "2\u03b8",
+            "Log Intensity",
+            null,
+            "x = 0.03",
+            "2\u03b8",
+            "Log Intensity",
+            null,
+            "x = 0.04",
+            "2\u03b8",
+            "Log Intensity"
+          ],
+          [
+            null,
+            2.28896,
+            2.40751,
+            null,
+            null,
+            2.28896,
+            2.5479,
+            null,
+            null,
+            2.28896,
+            2.37448,
+            null,
+            null,
+            2.28896,
+            2.74057,
+            null,
+            null,
+            2.28896,
+            2.91047
+          ],
+          [
+            null,
+            2.29642,
+            2.4672,
+            null,
+            null,
+            2.29642,
+            2.53355,
+            null,
+            null,
+            2.29642,
+            2.42245,
+            null,
+            null,
+            2.29642,
+            2.77103,
+            null,
+            null,
+            2.29642,
+            2.93611
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 7.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 7a",
+        "shape": [
+          9,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "Diffusivity (mm2 s-1)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            "1.58 \u00b1 0.0304",
+            "1.65 \u00b1 0.0429",
+            "1.65 \u00b1 0.0371",
+            "1.72 \u00b1 0.0380",
+            "1.63 \u00b1 0.0200"
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 7b",
+        "shape": [
+          9,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "Specific Heat (J g-1 K-1)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            "0.322 \u00b1 0.0068",
+            "0.321 \u00b1 0.0067",
+            "0.315 \u00b1 0.0076",
+            "0.319 \u00b1 0.0071",
+            "0.316 \u00b1 0.0088"
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 7b - DSC",
+        "shape": [
+          1693,
+          2
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "Specific Heat (J g-1 K-1)"
+          ],
+          [
+            300.09,
+            0.29367
+          ],
+          [
+            300.17,
+            0.29368
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 8.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 8a",
+        "shape": [
+          20,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "\u03ba_electronic MPB (W m-1 K-1)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            0.43,
+            0.62,
+            0.795,
+            0.972,
+            0.707
+          ]
+        ]
+      },
+      {
+        "sheet": "Supplementary Fig. 8b",
+        "shape": [
+          20,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "L MPB (W \u03a9 K-2)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            1.93986160599708e-08,
+            1.92955853662572e-08,
+            1.92227111229523e-08,
+            1.90943827004251e-08,
+            1.90760489848135e-08
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Supplementary Figure 9.xlsx",
+    "sheets": [
+      {
+        "sheet": "Supplementary Fig. 9",
+        "shape": [
+          31,
+          6
+        ],
+        "head": [
+          [
+            "Temperature (K)",
+            "\u03ba_lattice MPB (W m-1 K-1)",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            "x = 0",
+            "x = 0.01",
+            "x = 0.02",
+            "x = 0.03",
+            "x = 0.04"
+          ],
+          [
+            300,
+            2.228,
+            2.146,
+            1.915,
+            1.89,
+            1.991
+          ]
+        ]
+      }
+    ]
+  }
+]
