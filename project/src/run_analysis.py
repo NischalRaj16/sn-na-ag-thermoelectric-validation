@@ -40,9 +40,12 @@ def load(data_dir):
     d['PF_residual_pct']=100*(d.PF_calc_uW_cm_K2-d.PF_uW_cm_K2)/d.PF_uW_cm_K2
     d['ZT_calc']=d.PF_calc_uW_cm_K2*1e-4*d.T_K/d.kappa_total_W_m_K
     d['ZT_residual_pct']=100*(d.ZT_calc-d.zT_paper)/d.zT_paper
-    # chemical descriptors are deterministic composition features, not target-derived
-    d['Na_at_frac']=d.x; d['Ag_at_frac']=d.x; d['Sn_at_frac']=1-2*d.x
-    d['Na_atoms_100']=100*d.x; d['Ag_atoms_100']=100*d.x; d['S_atoms_100']=100
+    # Chemical descriptors are deterministic composition features, not target-derived.
+    # The source series is Sn_(0.99-x) Na_0.01 Ag_x S: Na is fixed at 1 at.%
+    # while Ag varies.  The previous implementation incorrectly set Na=x and
+    # Sn=1-2x, which distorted the composition features for every x != 0.01.
+    d['Na_at_frac']=0.01; d['Ag_at_frac']=d.x; d['Sn_at_frac']=0.99-d.x
+    d['Na_atoms_100']=1.0; d['Ag_atoms_100']=100*d.x; d['S_atoms_100']=100
     d['formula_mass_g_mol']=d['Sn_at_frac']*118.710+d.Na_at_frac*22.990+d.Ag_at_frac*107.868+d.S_atoms_100*32.06/100
     return d
 
